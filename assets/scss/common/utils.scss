@@ -1,0 +1,29 @@
+.uppercase { text-transform: uppercase}
+
+$spacingList: 0 5 10 15 20 25 30 40 50 60 70 80;
+$properties: (
+  "margin": "m",
+  "margin-top": "mt",
+  "margin-right": "mr",
+  "margin-bottom": "mb",
+  "margin-left": "ml",
+  "padding": "p",
+  "padding-top": "pt",
+  "padding-bottom": "pb",
+  "padding-left": "pl",
+  "padding-right": "pr"
+);
+@each $spacing in $spacingList {
+  @each $name, $prefix in $properties {
+    .#{$prefix}#{$spacing} {
+      #{$name}: #{$spacing}px;
+    }
+  }
+}
+
+.overflow-hidden { overflow: hidden}
+.jc-between { justify-content: space-between}
+.jc-end { justify-content: flex-end}
+.ai-center { align-items: center}
+.row-reverse { flex-direction: row-reverse}
+
