@@ -1,6 +1,6 @@
 .uppercase { text-transform: uppercase}
-
-$spacingList: 0 5 10 15 20 25 30 40 50 60 70 80;
+.lowercase { text-transform: lowercase}
+$spacingList: 0 5 10 15 20 25 30 40 50 60 70 80 100 150;
 $properties: (
   "margin": "m",
   "margin-top": "mt",
@@ -13,17 +13,52 @@ $properties: (
   "padding-left": "pl",
   "padding-right": "pr"
 );
+
+$screens: (
+  "sm": $screen-sm,
+  "md": $screen-md,
+  "lg": $screen-lg,
+  "xl": $screen-xl,
+  "xxl": $screen-xxl
+
+);
+
 @each $spacing in $spacingList {
   @each $name, $prefix in $properties {
     .#{$prefix}#{$spacing} {
       #{$name}: #{$spacing}px;
     }
+    @each $screenPrefix, $screenValue in $screens {
+      @media screen and (min-width: $screenValue) {
+        .#{$prefix}#{$spacing}-#{$screenPrefix} {
+          #{$name}: #{$spacing}px;
+        }
+      }
+    }
   }
 }
-
 .overflow-hidden { overflow: hidden}
 .jc-between { justify-content: space-between}
 .jc-end { justify-content: flex-end}
+.jc-center {justify-content: center}
 .ai-center { align-items: center}
+.ai-baseline {align-items: baseline}
 .row-reverse { flex-direction: row-reverse}
+.w-100 {width: 100% !important}
+.h-100 {height: 100% !important}
 
+.text-center {text-align: center}
+.justify-text{text-align: justify}
+.text-left{text-align: left}
+.line-text{text-decoration: underline;}
+.pointer{cursor: pointer;}
+.invert-text {unicode-bidi: bidi-override; direction: rtl; }
+.fw-bold {font-weight: bold;}
+
+// THE FLEX
+.the-flex{display:flex; flex-direction:column;}
+.flex-1 {flex-grow: 1;}
+.flex-2 {flex-grow: 2;}
+.flex-3 {flex-grow: 3;}
+.flex-4 {flex-grow: 4;}
+.flex-5 {flex-grow: 5;}
