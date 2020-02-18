@@ -1,4 +1,10 @@
+
+const env = require('dotenv').config();
+
 module.exports = {
+
+  env: env.parsed,
+
   /*
   ** Headers of the page
   */
@@ -24,8 +30,9 @@ module.exports = {
   loading: { color: '#3B8070' },
 
   modules: [
-    'bootstrap-vue/nuxt',
-    'nuxt-svg-loader',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/svg',
+    '@nuxtjs/axios',
   ],
 
   css: [
@@ -35,11 +42,11 @@ module.exports = {
   plugins: [
     { src: '~/plugins/animations/animate.js', ssr: false },
     { src: '~/plugins/directives.js' },
+    { src: '~/plugins/global-mixin.js'}
   ],
 
-  bootstrapVue: {
-    bootstrapCSS: true, // or `css`
-    bootstrapVueCSS: false // or `bvCSS`
+  axios: {
+    baseURL: process.env.BACKEND_URL,
   },
 
 
