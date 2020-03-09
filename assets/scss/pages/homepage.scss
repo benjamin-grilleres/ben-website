@@ -1,0 +1,37 @@
+.homepage {
+
+  .homepage-part-1 {
+    .title-h1 {
+      font-size: 50px;
+      line-height: 55px;
+      @apply font-avenir-bold;
+    }
+
+    .title-h2 {
+      font-size: 20px;
+      @apply font-avenir-regular;
+    }
+
+    .ben-image {
+      background-color: $black;
+
+      &.hide-image-scroll {
+        opacity: 0;
+      }
+    }
+  }
+
+  .homepage-part-2 {
+
+  }
+
+  .sub-title {
+    font-size: 35px;
+    position: relative;
+    @apply font-avenir-bold;
+
+
+  }
+
+
+}

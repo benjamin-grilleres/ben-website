@@ -42,7 +42,8 @@ module.exports = {
   plugins: [
     { src: '~/plugins/animations/animate.js', ssr: false },
     { src: '~/plugins/directives.js' },
-    { src: '~/plugins/global-mixin.js'}
+    { src: '~/plugins/global-mixin.js'},
+    { src: '~/plugins/bus.js'}
   ],
 
   axios: {

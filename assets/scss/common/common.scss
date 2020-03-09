@@ -1,0 +1,80 @@
+
+@font-face {
+  font-family: 'AvenirNextMedium';
+  src: url(~assets/fonts/AvenirNext-Medium.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AvenirNextBold';
+  src: url(~assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AvenirNextRegular';
+  src: url(~assets/fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,body {
+  color: $black;
+  font-family: 'AvenirNextRegular';
+  background: $grey;
+}
+
+.animated-link {
+  position: relative;
+
+  &:after {
+    content: '';
+    width:0;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: $black;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+.btn {
+  border-radius: 30px;
+  transition: background 0.3s ease-in-out, color 0.2s ease-in-out;
+  padding: 14px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .with-arrow {
+    width: 0;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover .with-arrow{
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+
+    path {
+      fill: white;
+    }
+  }
+}
+.btn-black {
+  @extend .btn;
+  border: 2px solid $black_light;
+  background: white;
+
+  &:hover {
+    background: $black_light;
+    color: white;
+  }
+}
+

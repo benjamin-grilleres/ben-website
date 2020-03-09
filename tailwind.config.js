@@ -23,17 +23,19 @@ module.exports = {
         xl: '1200px',
         '2xl': '1440px'
       },
-      colors: {},
+      colors: {
+        'black': '#2E3029',
+        'grey' : '#f5f5f5'
+      },
       fontFamily: {
-        'larsseit-bold': ['Larsseit-Bold'],
+        'avenir-bold': ['AvenirNextBold'],
+        'avenir-regular': ['AvenirNextRegular'],
+        'avenir-medium': ['AvenirNextMedium'],
       },
     },
     lineHeight: {
       'none': '1',
       '18': '18px',
-    },
-    fontSize: {
-      '14': '14px',
     },
   },
   variants: {},
