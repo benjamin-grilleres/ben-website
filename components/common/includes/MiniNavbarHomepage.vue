@@ -62,14 +62,19 @@
         methods: {
           displayTextUnderImage(displayText) {
             this.displayText = displayText
+          },
+
+          setClassActive() {
+            this.classActive = true;
           }
         },
 
         mounted() {
           this.$bus.$on('displayTextUnderImage', this.displayTextUnderImage)
-          setTimeout( () => {
+          this.$bus.$on('loadingComplete',this.setClassActive)
+          /*setTimeout( () => {
             this.classActive = true;
-          },500)
+          },500)*/
         }
     }
 </script>

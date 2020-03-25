@@ -15,6 +15,15 @@
     .ben-image {
       background-color: $black;
 
+      opacity: 0;
+      left: -40px;
+      position: relative;
+      transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
+      &.active {
+        opacity: 1;
+        left: 0;
+      }
+
       &.hide-image-scroll {
         opacity: 0;
       }

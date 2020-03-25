@@ -2,10 +2,10 @@
   <section class="homepage" style="height:3000px">
     <div class="flex homepage-part-1">
       <div class="col-6 z-20 transition ease-in-out duration-300" ref="benImage" style="padding:0" :class="hideImageOnScroll ? 'opacity-0' : 'opacity-100'">
-        <div data-fct="opacityAndLeft" data-delay="100" v-bckg-img="'/img/ben.JPG'" class="bckg-img h-screen ben-image">
+        <div v-bckg-img="'/img/ben.JPG'" class="bckg-img h-screen ben-image" :class="{'active':runAnimation}">
         </div>
       </div>
-      <div class="col-6" style="padding:0" data-fct="opacityAndRight" data-delay="300">
+      <div class="col-6 opacityAndRight" style="padding:0;transition-delay:250ms" :class="{'active':runAnimation}">
         <div class="row justify-center h-full items-center " style="margin-top:-45px">
           <div class="col-12 col-sm-10">
             <div>
@@ -93,12 +93,20 @@ export default {
 
       this.hideImageOnScroll = window.scrollY  > (imageHeight - 200);
       this.$bus.$emit('displayTextUnderImage',this.hideImageOnScroll);
+    },
+
+    loadingComplete() {
+      setTimeout( () => {
+        this.runAnimation = true
+      }, 400)
+
     }
   },
 
   data() {
     return {
       hideImageOnScroll: false,
+      runAnimation: false,
       skills: [
         {
           name: 'front',
@@ -140,6 +148,7 @@ export default {
       window.scrollTo(0,0);
     },600)*/
 
+    this.$bus.$on('loadingComplete',this.loadingComplete)
   },
 
   destroyed() {

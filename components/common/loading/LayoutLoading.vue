@@ -1,10 +1,8 @@
 <template>
     <div>
-      <transition name="fade">
-        <loading-page-component v-show="loadingPage" @typingComplete="setLoadingPage(false)"></loading-page-component>
-      </transition>
+      <loading-page-component class="transition ease-in-out duration-300" :class="!loadingPage ? 'opacity-0 z-0': 'opacity-100 z-auto'" @typingComplete="typingComplete"></loading-page-component>
 
-      <div v-show="!loadingPage">
+      <div class="transition ease-in-out duration-500" :class="loadingPage ? 'opacity-0 z-0': 'opacity-100 z-auto'">
         <slot></slot>
       </div>
 
@@ -23,7 +21,12 @@
       },
 
       methods: {
-          ...mapMutations('animations',['setLoadingPage'])
+          ...mapMutations('animations',['setLoadingPage']),
+
+        typingComplete() {
+          this.setLoadingPage(false);
+          this.$bus.$emit('loadingComplete');
+        }
       },
 
       mounted() {
