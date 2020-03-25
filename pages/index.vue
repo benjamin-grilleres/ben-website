@@ -1,6 +1,6 @@
 <template>
   <section class="homepage" style="height:3000px">
-    <div class="flex homepage-part-1">IMG_3793 (1).jpg
+    <div class="flex homepage-part-1">
       <div class="col-6 z-20 transition ease-in-out duration-300" ref="benImage" style="padding:0" :class="hideImageOnScroll ? 'opacity-0' : 'opacity-100'">
         <div v-bckg-img="'/img/ben.jpg'" class="bckg-img h-screen ben-image" :class="{'active':runAnimation}">
         </div>
