@@ -5,6 +5,7 @@ module.exports = {
 
   env: env.parsed,
 
+
   /*
   ** Headers of the page
   */
@@ -22,7 +23,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
   },
   /*
   ** Customize the progress bar color
@@ -35,6 +36,8 @@ module.exports = {
     '@nuxtjs/axios',
   ],
 
+  pageTransition: 'fade',
+
   css: [
     '~/assets/scss/index.scss'
   ],
@@ -43,7 +46,8 @@ module.exports = {
     { src: '~/plugins/animations/animate.js', ssr: false },
     { src: '~/plugins/directives.js' },
     { src: '~/plugins/global-mixin.js'},
-    { src: '~/plugins/bus.js'}
+    { src: '~/plugins/bus.js'},
+    { src: '~/plugins/loadScriptsAnimation.js', ssr: false},
   ],
 
   axios: {

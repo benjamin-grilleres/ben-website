@@ -1,11 +1,11 @@
 <template>
   <section class="homepage" style="height:3000px">
     <div class="flex homepage-part-1">
-      <div class="col-6 bg-black z-20 transition ease-in-out duration-300" ref="benImage" style="padding:0" :class="hideImageOnScroll ? 'opacity-0' : 'opacity-100'">
-        <div data-fct="opacity" data-delay="500" v-bckg-img="'/img/ben.JPG'" class="bckg-img h-screen ben-image">
+      <div class="col-6 z-20 transition ease-in-out duration-300" ref="benImage" style="padding:0" :class="hideImageOnScroll ? 'opacity-0' : 'opacity-100'">
+        <div data-fct="opacityAndLeft" data-delay="100" v-bckg-img="'/img/ben.JPG'" class="bckg-img h-screen ben-image">
         </div>
       </div>
-      <div class="col-6" style="padding:0" data-fct="opacityAndRight" data-delay="700">
+      <div class="col-6" style="padding:0" data-fct="opacityAndRight" data-delay="300">
         <div class="row justify-center h-full items-center " style="margin-top:-45px">
           <div class="col-12 col-sm-10">
             <div>
@@ -84,6 +84,8 @@ export default {
     ArrowLeft
   },
 
+  layout: 'homepage',
+
   methods: {
     checkWindowScroll() {
       let $image = this.$refs.benImage;
@@ -130,7 +132,14 @@ export default {
 
   mounted() {
     Animate.initClass(this.$el, window)
+    document.documentElement.className="js mes-experiences";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
     window.addEventListener('scroll',this.checkWindowScroll)
+
+    setTimeout( () => {
+      window.scrollTo(0,10);
+      window.scrollTo(0,0);
+    },600)
+
   },
 
   destroyed() {

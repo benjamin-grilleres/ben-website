@@ -1,10 +1,12 @@
 <template>
   <div class="fixed w-full z-10 py-6 navbar-animated" :class="[displayText ? 'bg-white' : 'bg-grey', classActive ? 'active' : '' ]">
     <div class="flex justify-end ">
-      <div :class="[displayText ? 'col-4 opacity-100' : 'col-8 opacity-0']"  class="transition ease-in-out duration-300">
-        <span class="font-avenir-bold text-xl">Benjamin Grilleres </span> - <span>Développeur Web Fullstack</span>
+      <div :class="[displayText ? 'col-4 col-xxl-3 opacity-100' : 'col-8 opacity-0']"  class="transition ease-in-out duration-300">
+        <nuxt-link to="/">
+          <span class="font-avenir-bold text-xl">Benjamin Grilleres </span> - <span>Développeur Web Fullstack</span>
+        </nuxt-link>
       </div>
-      <div  :class="[displayText ? 'col-8' : 'col-6']" class="custom-col-animation">
+      <div  :class="[displayText ? 'col-8 col-xxl-9' : 'col-6']" class="custom-col-animation">
         <div class="flex w-full items-center justify-between relative social" :class="{'active' : displayText }">
           <div class="flex ml-4">
             <a href=""><img src="/icons/github.svg" height="16px" width="16px"/></a>
@@ -41,7 +43,7 @@
               links: [
                 {
                   text: 'Mes expériences',
-                  url: '/'
+                  url: '/mes-experiences'
                 },
                 {
                   text: 'Portfolio',
@@ -72,7 +74,7 @@
     }
 </script>
 
-<style scoped>
+<style>
   .navbar-animated {
     opacity: 0;
     top: -45px;

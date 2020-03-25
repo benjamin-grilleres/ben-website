@@ -1,17 +1,21 @@
 <template>
-  <div>
-    <mini-navbar-homepage></mini-navbar-homepage>
-    <nuxt/>
-  </div>
+  <layout-loading>
+    <general-navbar-homepage></general-navbar-homepage>
+    <nuxt class="margin-top-navbar"/>
+    <div class="cursor">
+      <div class="cursor__inner cursor__inner--circle"></div>
+    </div>
+  </layout-loading>
 </template>
 
 <style>
 </style>
 
 <script>
-  import MiniNavbarHomepage from "../components/common/includes/MiniNavbarHomepage";
+  import GeneralNavbarHomepage from "../components/common/includes/GeneralNavbarHomepage";
+  import LayoutLoading from "../components/common/loading/LayoutLoading";
   export default {
-    components: {MiniNavbarHomepage},
+    components: {LayoutLoading, GeneralNavbarHomepage},
 
   }
 </script>

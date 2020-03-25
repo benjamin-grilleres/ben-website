@@ -20,7 +20,8 @@
     "jquery": "^3.4.1",
     "node-sass": "^4.12.0",
     "nuxt": "^2.0.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "typed.js": "^2.0.11"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
