@@ -1,11 +1,13 @@
 <template>
     <div>
       <transition name="fade">
-        <loading-page-component v-if="loadingPage" @typingComplete="setLoadingPage(false)"></loading-page-component>
-        <div v-else>
-          <slot></slot>
-        </div>
+        <loading-page-component v-show="loadingPage" @typingComplete="setLoadingPage(false)"></loading-page-component>
       </transition>
+
+      <div v-show="!loadingPage">
+        <slot></slot>
+      </div>
+
     </div>
 </template>
 
