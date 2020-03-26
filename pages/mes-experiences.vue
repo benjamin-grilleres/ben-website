@@ -40,6 +40,11 @@
 
         },
 
+        created() {
+          this.$bus.$emit('displayTextUnderImage', true)
+        },
+
+
         mounted() {
         }
     }

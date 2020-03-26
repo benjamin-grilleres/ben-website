@@ -75,16 +75,15 @@
 
 <script>
 
-import MiniNavbarHomepage from "../components/common/includes/MiniNavbarHomepage";
 import ArrowLeft from '@/static/icons/right.svg?inline'
 import Animate from '~/plugins/animations/animate.js'
+import {mapGetters} from 'vuex'
+
 export default {
   components: {
-    MiniNavbarHomepage,
     ArrowLeft
   },
 
-  layout: 'homepage',
 
   methods: {
     checkWindowScroll() {
@@ -101,6 +100,10 @@ export default {
       }, 400)
 
     }
+  },
+
+  computed: {
+    ...mapGetters('animations', ['loadingPage'])
   },
 
   data() {
@@ -138,16 +141,26 @@ export default {
     }
   },
 
+  created() {
+    this.$bus.$emit('displayTextUnderImage', false)
+  },
+
   mounted() {
     Animate.initClass(this.$el, window)
     document.documentElement.className="js mes-experiences";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
     window.addEventListener('scroll',this.checkWindowScroll)
 
-    this.$bus.$on('loadingComplete',this.loadingComplete)
+    if ( !this.loadingPage ) {
+      this.loadingComplete();
+    } else {
+      this.$bus.$on('loadingComplete',this.loadingComplete)
+    }
+
   },
 
   destroyed() {
     window.removeEventListener('scroll',this.checkWindowScroll)
+    this.runAnimation = false;
   }
 }
 </script>

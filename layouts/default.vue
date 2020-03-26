@@ -1,7 +1,7 @@
 <template>
   <layout-loading>
     <general-navbar-homepage></general-navbar-homepage>
-    <nuxt class="margin-top-navbar"/>
+    <nuxt :class="customClassNuxtComponent"/>
     <custom-cursor></custom-cursor>
   </layout-loading>
 </template>
@@ -15,6 +15,20 @@
   import CustomCursor from "../components/common/includes/CustomCursor";
   export default {
     components: {CustomCursor, LayoutLoading, GeneralNavbarHomepage},
+
+    data() {
+      return {
+        customClassNuxtComponent: ''
+      }
+    },
+
+    watch: {
+      '$route'() {
+        setTimeout( () => {
+          this.customClassNuxtComponent = this.$route.path !== '/' ? 'margin-top-navbar' : ''
+        }, 600)
+      }
+    }
 
   }
 </script>
