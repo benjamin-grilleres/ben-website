@@ -143,11 +143,6 @@ export default {
     document.documentElement.className="js mes-experiences";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
     window.addEventListener('scroll',this.checkWindowScroll)
 
-    /*setTimeout( () => {
-      window.scrollTo(0,10);
-      window.scrollTo(0,0);
-    },600)*/
-
     this.$bus.$on('loadingComplete',this.loadingComplete)
   },
 

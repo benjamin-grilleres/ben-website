@@ -46,7 +46,11 @@
       },
 
         mounted() {
-          new Typed('.content-loading', this.options);
+          if ( process.env.NODE_ENV !== 'production' ) {
+            this.sendEventAfterTypingComplete()
+          } else {
+            new Typed('.content-loading', this.options);
+          }
         }
     }
 </script>

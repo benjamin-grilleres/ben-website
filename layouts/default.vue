@@ -2,9 +2,7 @@
   <layout-loading>
     <general-navbar-homepage></general-navbar-homepage>
     <nuxt class="margin-top-navbar"/>
-    <div class="cursor">
-      <div class="cursor__inner cursor__inner--circle"></div>
-    </div>
+    <custom-cursor></custom-cursor>
   </layout-loading>
 </template>
 
@@ -14,8 +12,9 @@
 <script>
   import GeneralNavbarHomepage from "../components/common/includes/GeneralNavbarHomepage";
   import LayoutLoading from "../components/common/loading/LayoutLoading";
+  import CustomCursor from "../components/common/includes/CustomCursor";
   export default {
-    components: {LayoutLoading, GeneralNavbarHomepage},
+    components: {CustomCursor, LayoutLoading, GeneralNavbarHomepage},
 
   }
 </script>

@@ -15,12 +15,9 @@ export default async ({ app, store })  => {
 
   app.mixins.push({
     mounted() {
-      //loadScript('/js/imagesloaded.pkgd.min.js')
-      //loadScript('/js/charming.min.js')
       loadScript('/js/bezier-easing.min.js')
       loadScript('/js/TweenMax.min.js')
-      loadScript('/js/cursor.js')
-      //loadScript('/js/demo.js')
+      loadScript('/js/demo.js')
     },
   })
 }

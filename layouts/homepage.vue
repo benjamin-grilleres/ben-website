@@ -2,9 +2,7 @@
   <layout-loading>
     <mini-navbar-homepage></mini-navbar-homepage>
     <nuxt/>
-    <div class="cursor">
-      <div class="cursor__inner cursor__inner--circle"></div>
-    </div>
+    <custom-cursor></custom-cursor>
   </layout-loading>
 </template>
 
@@ -14,8 +12,9 @@
 <script>
   import MiniNavbarHomepage from "../components/common/includes/MiniNavbarHomepage";
   import LayoutLoading from "../components/common/loading/LayoutLoading";
+  import CustomCursor from "../components/common/includes/CustomCursor";
   export default {
-    components: {LayoutLoading, MiniNavbarHomepage},
+    components: {CustomCursor, LayoutLoading, MiniNavbarHomepage},
 
 
   }

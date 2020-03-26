@@ -1,7 +1,6 @@
 <template>
     <div>
       <loading-page-component class="transition ease-in-out duration-300" :class="!loadingPage ? 'opacity-0 z-0': 'opacity-100 z-auto'" @typingComplete="typingComplete"></loading-page-component>
-
       <div class="transition ease-in-out duration-500" :class="loadingPage ? 'opacity-0 z-0': 'opacity-100 z-auto'">
         <slot></slot>
       </div>
