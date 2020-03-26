@@ -31,7 +31,10 @@
   }
 
   .homepage-part-2 {
-
+      .title-h3 {
+        font-size: 25px;
+        @apply font-avenir-medium;
+      }
   }
 
   .sub-title {

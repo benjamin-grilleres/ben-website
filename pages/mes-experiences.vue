@@ -40,12 +40,9 @@
 
         },
 
-        created() {
-          this.$bus.$emit('displayTextUnderImage', true)
-        },
-
 
         mounted() {
+          this.$bus.$emit('displayTextUnderImage', true)
         }
     }
 </script>

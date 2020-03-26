@@ -27,43 +27,46 @@
       <div class="homepage-part-2 mt-20">
         <div class="row justify-center">
           <div class="col-8">
-            <div class="text-center mb-12">
+            <div class="text-center mb-24">
             <span class="sub-title">
               3 ans d'expérience et diplômé d'un Master en Développement Logiciel
             </span>
             </div>
           </div>
-          <div class="col-12 py-20">
-            <div class="row">
-              <div class="col-4 flex-1"
-                   v-for="(skill,key) in skills"
-                  :key="'skill' + key"
-              >
-                <div class="row justify-center h-full">
-                  <div class="col-12 col-sm-12 flex-1 ">
-                    <div class="bg-white py-10 px-3 h-full">
-                      <div class="mb-4 text-center text-lg uppercase font-avenir-medium">{{ skill.name}}</div>
-                      <div v-for="(infoSkill,key2) in skill.infos"
-                           :key="'skillinfo' + key + '-' +key2"
-                           class="text-center mb-2 text-xl"
-                      >
-                        {{ infoSkill }}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div class="col-10 mb-32">
+            <div class="row justify-between items-center mb-32">
+              <div class="col-3">
+                <img src="/img/tech/logos.png" width="100%">
+              </div>
+              <div class="col-8">
+                <h3 class="title-h3 mb-5">Développement front et composants réutilisables</h3>
+                <p class="text-lg">La conception par composants même dans le développement front a tout son intérêt pour maximiser la réutilisabilité et la maintenabilité d'un site.</p>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-sm-10 text-center text-xl">
-            Décrire en quelques mots les compétences que l'on peut proposer c'est bien.
-            <br>Aller voir mes projets et mes différentes expériences c'est encore mieux.
-          </div>
-          <div class="col-12 text-center mt-8">
-            <button class="btn-black" v-scroll-to="'.homepage-part-2'">
-              <ArrowLeft class="with-arrow"></ArrowLeft>
-              Voir mes projets
-            </button>
+
+            <div class="row justify-between items-center mb-32">
+              <div class="col-8">
+                <h3 class="title-h3 mb-5">Conception d'architectures complexes</h3>
+                <p class="text-lg">Mes différentes expériences m'ont permis d'acquérir suffisament de compétences pour concevoir dans sa globalité des sites plus ou moins complexes et de proposer des solutions techniques aux problèmes que l'on peut rencontrer.</p>
+              </div>
+              <div class="col-3">
+                <img src="/img/tech/logos2.png" width="100%">
+              </div>
+            </div>
+            <div class="row justify-center">
+              <div class="col-10">
+                <h3 class="title-h3 mb-5 text-center mb-6">Le développement ce n'est pas que coder</h3>
+                <p class="text-lg text-center">Le travail d'équipe est essentiel au bon déroulement des projets. Le pair programming et le code review sont des atouts majeurs pour faire progresser chaque développeur en apprenant toujours plus.</p>
+              </div>
+             </div>
+            <div class="row">
+              <div class="col-12 text-center mt-8">
+                <button class="btn-black" v-scroll-to="'.homepage-part-2'">
+                  <ArrowLeft class="with-arrow"></ArrowLeft>
+                  Voir mes projets
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
