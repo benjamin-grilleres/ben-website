@@ -1,11 +1,11 @@
 <template>
   <section class="homepage" >
-    <div class="flex homepage-part-1">
-      <div class="col-5 col-xl-6 z-20 transition ease-in-out duration-300 custom-padding" ref="benImage"  :class="hideImageOnScroll ? 'opacity-0' : 'opacity-100'">
+    <div class="flex flex-wrap homepage-part-1">
+      <div class="col-12 col-md-5 col-xl-6 z-20 transition ease-in-out duration-300 custom-padding" ref="benImage"  :class="hideImageOnScroll ? 'opacity-0' : 'opacity-100'">
         <div v-bckg-img="'/img/ben.jpg'" class="bckg-img ben-image" :class="{'active':runAnimation}">
         </div>
       </div>
-      <div class="col-7 col-xl-6 opacityAndRight custom-padding" style="transition-delay:250ms" :class="{'active':runAnimation}">
+      <div class="col-12 col-md-7 col-xl-6 opacityAndRight custom-padding mt-12 md:mt-0 text-center md:text-left" style="transition-delay:250ms" :class="{'active':runAnimation}">
         <div class="flex justify-center h-full items-center ">
           <div class="col-12 col-sm-10">
             <div>
@@ -26,35 +26,35 @@
     <div class="container">
       <div class="homepage-part-2 mt-20">
         <div class="row justify-center">
-          <div class="col-8">
-            <div class="text-center mb-24">
+          <div class="col-md-11 col-lg-8">
+            <div class="text-center mb-12 md:mb-24">
             <span class="sub-title">
               3 ans d'expérience et diplômé d'un Master en Développement Logiciel
             </span>
             </div>
           </div>
-          <div class="col-10 mb-32">
-            <div class="row justify-between items-center mb-32">
-              <div class="col-3">
+          <div class=" col-12 col-lg-10 mb-32">
+            <div class="row justify-center md:justify-between items-center mb-16 md:mb-32">
+              <div class="col-8 col-md-3">
                 <img src="/img/tech/logos.png" width="100%">
               </div>
-              <div class="col-8">
+              <div class="col-md-8 text-center md:text-left mt-10 md:mt-0">
                 <h3 class="title-h3 mb-5">Développement front et composants réutilisables</h3>
                 <p class="text-lg">La conception par composants même dans le développement front a tout son intérêt pour maximiser la réutilisabilité et la maintenabilité d'un site.</p>
               </div>
             </div>
 
-            <div class="row justify-between items-center mb-32">
-              <div class="col-8">
+            <div class="row justify-center md:justify-between items-center mb-16 md:mb-32 flex-col-reverse md:flex-row">
+              <div class="col-md-8 text-center md:text-left mt-10 md:mt-0">
                 <h3 class="title-h3 mb-5">Conception d'architectures complexes</h3>
                 <p class="text-lg">Mes différentes expériences m'ont permis d'acquérir suffisament de compétences pour concevoir dans sa globalité des sites plus ou moins complexes et de proposer des solutions techniques aux problèmes que l'on peut rencontrer.</p>
               </div>
-              <div class="col-3">
+              <div class="col-8 col-md-3">
                 <img src="/img/tech/logos2.png" width="100%">
               </div>
             </div>
             <div class="row justify-center">
-              <div class="col-10">
+              <div class="col-12">
                 <h3 class="title-h3 mb-5 text-center mb-6">Le développement ce n'est pas que coder</h3>
                 <p class="text-lg text-center">Le travail d'équipe est essentiel au bon déroulement des projets. Le pair programming et le code review sont des atouts majeurs pour faire progresser chaque développeur en apprenant toujours plus.</p>
               </div>

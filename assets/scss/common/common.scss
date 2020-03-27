@@ -57,6 +57,9 @@ html,body {
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: $screen-md) {
+    padding: 9px 23px;
+  }
   .with-arrow {
     width: 0;
     height: 0;
