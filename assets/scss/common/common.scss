@@ -21,9 +21,12 @@
 html,body {
   color: $black;
   font-family: 'AvenirNextRegular';
-
   background: white;
   height: 100%;
+
+  &.loading {
+    overflow: hidden;
+  }
 }
 
 .margin-top-navbar {

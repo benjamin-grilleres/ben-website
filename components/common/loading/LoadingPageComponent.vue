@@ -1,7 +1,7 @@
 <template>
-    <div class="loading-page-component text-4xl font-avenir-bold">
+    <div class="loading-page-component text-2xl md:text-4xl font-avenir-bold">
       <div class="flex items-end">
-            <div class="content-loading text-center" style="width: 800px"></div>
+            <div class="content-loading text-center"></div>
       </div>
 
     </div>
@@ -45,16 +45,29 @@
         }
       },
 
-        mounted() {
-          if ( process.env.NODE_ENV !== 'production' ) {
-            this.sendEventAfterTypingComplete()
-          } else {
-            new Typed('.content-loading', this.options);
-          }
+      mounted() {
+        if ( process.env.NODE_ENV !== 'production' ) {
+          this.sendEventAfterTypingComplete()
+        } else {
+          new Typed('.content-loading', this.options);
+          document.body.classList.add('loading');
         }
+      }
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  .content-loading {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
 
+    @media screen and (max-width: 768px) {
+      width: 95%;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+  }
 </style>
