@@ -1,10 +1,20 @@
 .homepage {
 
   .homepage-part-1 {
+
+    @media screen and (max-width: $screen-lg) {
+      margin-top: 160px;
+    }
+
     .title-h1 {
       font-size: 50px;
       line-height: 55px;
       @apply font-avenir-bold;
+
+      @media screen and (max-width: $screen-ipad-paysage) {
+        font-size: 40px;
+        line-height:45px;
+      }
     }
 
     .title-h2 {
@@ -14,6 +24,15 @@
 
     .ben-image {
       background-color: $black;
+      height: 100vh;
+
+      @media screen and (max-width: $screen-xl) {
+        height: 600px;
+      }
+
+      @media screen and (max-width: $screen-lg) {
+        height: 400px
+      }
 
       opacity: 0;
       left: -40px;
@@ -26,6 +45,14 @@
 
       &.hide-image-scroll {
         opacity: 0;
+      }
+    }
+
+    .custom-padding {
+      padding: 0 !important;
+
+      @media screen and (max-width: $screen-lg) {
+        padding: 0 15px !important;
       }
     }
   }

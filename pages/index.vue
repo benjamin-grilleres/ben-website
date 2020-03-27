@@ -1,12 +1,12 @@
 <template>
-  <section class="homepage" style="height:3000px">
+  <section class="homepage" >
     <div class="flex homepage-part-1">
-      <div class="col-6 z-20 transition ease-in-out duration-300" ref="benImage" style="padding:0" :class="hideImageOnScroll ? 'opacity-0' : 'opacity-100'">
-        <div v-bckg-img="'/img/ben.jpg'" class="bckg-img h-screen ben-image" :class="{'active':runAnimation}">
+      <div class="col-5 col-xl-6 z-20 transition ease-in-out duration-300 custom-padding" ref="benImage"  :class="hideImageOnScroll ? 'opacity-0' : 'opacity-100'">
+        <div v-bckg-img="'/img/ben.jpg'" class="bckg-img ben-image" :class="{'active':runAnimation}">
         </div>
       </div>
-      <div class="col-6 opacityAndRight" style="padding:0;transition-delay:250ms" :class="{'active':runAnimation}">
-        <div class="row justify-center h-full items-center " style="margin-top:-45px">
+      <div class="col-7 col-xl-6 opacityAndRight custom-padding" style="transition-delay:250ms" :class="{'active':runAnimation}">
+        <div class="flex justify-center h-full items-center ">
           <div class="col-12 col-sm-10">
             <div>
               <h1 class="title-h1 mb-6">Hello, moi c'est Benjamin !</h1>
@@ -82,6 +82,7 @@ import ArrowLeft from '@/static/icons/right.svg?inline'
 import Animate from '~/plugins/animations/animate.js'
 import {mapGetters} from 'vuex'
 
+const MEDIA_MAX_IMAGE = 991;
 export default {
   components: {
     ArrowLeft
@@ -90,19 +91,29 @@ export default {
 
   methods: {
     checkWindowScroll() {
-      let $image = this.$refs.benImage;
-      let imageHeight = $image.clientHeight;
+      if ( this.windowWidth <= MEDIA_MAX_IMAGE ) {
+        this.$bus.$emit('displayTextUnderImage',true);
+      } else {
+        let $image = this.$refs.benImage;
+        let imageHeight = $image.clientHeight;
 
-      this.hideImageOnScroll = window.scrollY  > (imageHeight - 200);
-      this.$bus.$emit('displayTextUnderImage',this.hideImageOnScroll);
+        this.hideImageOnScroll = window.scrollY  > (imageHeight - 200);
+
+        this.$bus.$emit('displayTextUnderImage',this.hideImageOnScroll);
+      }
     },
 
     loadingComplete() {
       setTimeout( () => {
         this.runAnimation = true
       }, 400)
+    },
 
-    }
+    checkResizeScreen() {
+      let width = window.innerWidth;
+      this.windowWidth = width;
+      this.checkWindowScroll()
+    },
   },
 
   computed: {
@@ -140,17 +151,14 @@ export default {
             'Veille technologique'
           ]
         }
-      ]
+      ],
+      windowWidth: 0
     }
   },
 
-  created() {
-    this.$bus.$emit('displayTextUnderImage', false)
-  },
 
   mounted() {
     Animate.initClass(this.$el, window)
-    document.documentElement.className="js mes-experiences";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
     window.addEventListener('scroll',this.checkWindowScroll)
 
     if ( !this.loadingPage ) {
@@ -159,10 +167,15 @@ export default {
       this.$bus.$on('loadingComplete',this.loadingComplete)
     }
 
+    window.addEventListener('resize',this.checkResizeScreen)
+    this.checkResizeScreen();
+    this.checkWindowScroll()
+
   },
 
   destroyed() {
     window.removeEventListener('scroll',this.checkWindowScroll)
+    window.removeEventListener('resize', this.checkResizeScreen);
     this.runAnimation = false;
   }
 }
