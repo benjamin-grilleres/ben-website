@@ -92,8 +92,10 @@ import Animate from '~/plugins/animations/animate.js'
 import {mapGetters} from 'vuex'
 import BeautifulCarousel from "../components/homepage/BeautifulCarousel";
 const MEDIA_MAX_IMAGE = 991;
-import Swiper from 'swiper'
+
 export default {
+
+
   components: {
     BeautifulCarousel,
     ArrowLeft
@@ -153,23 +155,6 @@ export default {
     window.addEventListener('resize',this.checkResizeScreen)
     this.checkResizeScreen();
     this.checkWindowScroll()
-
-    setTimeout( () => {
-      new Swiper(".swiper-container", {
-        direction: "vertical",
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        speed: 1000,
-        parallax: true,
-        autoplay: false,
-        effect: "slide",
-        allowTouchMove: false,
-        mousewheelControl: 1
-      });
-    },8000)
 
 
 
