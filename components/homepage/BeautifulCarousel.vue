@@ -59,7 +59,6 @@
 </template>
 
 <script>
-  import Swiper from 'swiper'
   import BeautifulCarouselSlide from "./BeautifulCarouselSlide";
     export default {
         name: "BeautifulCarousel",
@@ -71,20 +70,7 @@
         methods: {},
 
         mounted() {
-          new Swiper(".swiper-container", {
-            direction: "vertical",
-            loop: true,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-            speed: 1000,
-            parallax: true,
-            autoplay: false,
-            effect: "slide",
-            allowTouchMove: false,
-            mousewheelControl: 1
-          });
+
         }
     }
 </script>
