@@ -74,11 +74,11 @@
         </div>
 
       </div>
-      <div class="homepage-part-3 mt-10">
+      <div class="homepage-part-3 mt-10 mb-56">
         <div class="text-center mb-12 md:mb-24 sub-title">
           J'ai travaillé avec eux
         </div>
-       <beautiful-carousel class="my-20"></beautiful-carousel>
+       <beautiful-carousel></beautiful-carousel>
       </div>
     </div>
 

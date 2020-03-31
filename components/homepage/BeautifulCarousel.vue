@@ -9,10 +9,10 @@
           linkedin="https://www.linkedin.com/in/thomas-lebrequier-developpeur/"
         >
           <template slot="bloc-left">
-            <h1 class="hover:underline">
-                <span class="emphasis">Thomas<br>Lebrequier</span>
-            </h1>
-            <p>Développeur fullstack chez Wecom4U</p>
+            <h4>
+                Thomas<br>Lebrequier
+            </h4>
+            <p>Développeur fullstack <br> chez Wecom4U</p>
           </template>
 
           <p class="paragraph" slot="bloc-right">
@@ -27,9 +27,9 @@
           linkedin="https://www.linkedin.com/in/nicolas-cont%C3%A9-6816b483/"
         >
           <template slot="bloc-left">
-            <h1 class="hover:underline">
-                <span class="emphasis">Nicolas<br>Conté</span>
-            </h1>
+            <h4 class="hover:underline">
+                Nicolas<br>Conté
+            </h4>
             <p>CEO Bubbleflat</p>
           </template>
           <p class="paragraph" slot="bloc-right">
@@ -78,11 +78,11 @@
               el: '.swiper-pagination',
               clickable: true,
             },
-            grabCursor: true,
             speed: 1000,
             parallax: true,
             autoplay: false,
             effect: "slide",
+            allowTouchMove: false,
             mousewheelControl: 1
           });
         }
