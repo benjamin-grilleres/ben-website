@@ -48,6 +48,7 @@ module.exports = {
     { src: '~/plugins/global-mixin.js'},
     { src: '~/plugins/bus.js'},
     { src: '~/plugins/loadScriptsAnimation.js', ssr: false},
+    { src: "~/plugins/vue-swiper.js", ssr: false }
   ],
 
   axios: {
