@@ -39,7 +39,9 @@
                 <img src="/img/tech/logos.png" width="100%">
               </div>
               <div class="col-md-8 text-center md:text-left mt-10 md:mt-0">
-                <h3 class="title-h3 mb-5">Développement front et composants réutilisables</h3>
+                <h3 class="title-h3 mb-5">
+                  Développement front et composants réutilisables
+                </h3>
                 <p class="text-lg">La conception par composants même dans le développement front a tout son intérêt pour maximiser la réutilisabilité et la maintenabilité d'un site.</p>
               </div>
             </div>
@@ -67,9 +69,16 @@
                 </button>
               </div>
             </div>
+
           </div>
         </div>
 
+      </div>
+      <div class="homepage-part-3 mt-10">
+        <div class="text-center mb-12 md:mb-24 sub-title">
+          J'ai travaillé avec eux
+        </div>
+       <beautiful-carousel class="my-20"></beautiful-carousel>
       </div>
     </div>
 
@@ -81,10 +90,11 @@
 import ArrowLeft from '@/static/icons/right.svg?inline'
 import Animate from '~/plugins/animations/animate.js'
 import {mapGetters} from 'vuex'
-
+import BeautifulCarousel from "../components/homepage/BeautifulCarousel";
 const MEDIA_MAX_IMAGE = 991;
 export default {
   components: {
+    BeautifulCarousel,
     ArrowLeft
   },
 
@@ -124,35 +134,7 @@ export default {
     return {
       hideImageOnScroll: false,
       runAnimation: false,
-      skills: [
-        {
-          name: 'front',
-          infos: [
-            'Intégration de maquettes',
-            'Architecture par composants',
-            'Intégration de librairies',
-            'Utilisation d\'API'
-          ]
-        },
-        {
-          name: 'back',
-          infos: [
-            'Conception UML',
-            'Architecture MVC',
-            'Intégration de modules',
-          ]
-        },
-        {
-          name: 'Général',
-          infos: [
-            'Management d\'équipe',
-            'Pair Programming',
-            'Revue de code',
-            'Veille technologique'
-          ]
-        }
-      ],
-      windowWidth: 0
+      windowWidth: 0,
     }
   },
 
@@ -170,6 +152,7 @@ export default {
     window.addEventListener('resize',this.checkResizeScreen)
     this.checkResizeScreen();
     this.checkWindowScroll()
+
 
   },
 
