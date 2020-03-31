@@ -154,20 +154,23 @@ export default {
     this.checkResizeScreen();
     this.checkWindowScroll()
 
-    new Swiper(".swiper-container", {
-      direction: "vertical",
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      speed: 1000,
-      parallax: true,
-      autoplay: false,
-      effect: "slide",
-      allowTouchMove: false,
-      mousewheelControl: 1
-    });
+    setTimeout( () => {
+      new Swiper(".swiper-container", {
+        direction: "vertical",
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        speed: 1000,
+        parallax: true,
+        autoplay: false,
+        effect: "slide",
+        allowTouchMove: false,
+        mousewheelControl: 1
+      });
+    },8000)
+
 
 
   },
