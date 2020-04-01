@@ -1,5 +1,5 @@
 <template>
-  <div id="home-slider">
+  <div id="home-slider" class="slider-homepage">
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <beautiful-carousel-slide
@@ -59,6 +59,8 @@
 </template>
 
 <script>
+
+  import Swiper from 'swiper'
   import BeautifulCarouselSlide from "./BeautifulCarouselSlide";
     export default {
         name: "BeautifulCarousel",
@@ -67,27 +69,29 @@
             return {}
         },
 
-        methods: {},
+        methods: {
+          loadingComplete() {
+            let s = new Swiper(".swiper-container", {
+              direction: "vertical",
+              loop: true,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              speed: 1000,
+              parallax: true,
+              autoplay: false,
+              effect: "slide",
+              allowTouchMove: false,
+              mousewheelControl: 1
+            });
+          }
+        },
 
         mounted() {
-          new Swiper(".swiper-container", {
-            direction: "vertical",
-            loop: true,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-            speed: 1000,
-            parallax: true,
-            autoplay: false,
-            effect: "slide",
-            allowTouchMove: false,
-            mousewheelControl: 1
-          });
+          this.$bus.$on('loadingComplete',this.loadingComplete)
+
         }
     }
 </script>
 
-<style scoped>
-
-</style>

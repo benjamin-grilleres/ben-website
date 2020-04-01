@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500,500i,600,600i,700,700i |Cormorant+SC:400,500,600,700');
-/* ====================================
-Home Slider
-==================================== */
-
-#home-slider {
+/* purgecss start ignore */
+.slider-homepage {
   height: 50vh;
   width: 100%;
   position: relative;
@@ -859,6 +855,6 @@ Home Slider
       transform: rotate(360deg);
     }
   }
-
-
 }
+
+/* purgecss end ignore */
