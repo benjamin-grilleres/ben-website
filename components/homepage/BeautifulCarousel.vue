@@ -2,7 +2,24 @@
   <div id="home-slider" class="slider-homepage">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <beautiful-carousel-slide
+        <div class="swiper-slide swiper-slide-one">
+          <div class="swiper-image" data-swiper-parallax-y="-20%">
+            <div class="swiper-image-inner swiper-image-left" :class="'swiper-image-one'">
+              <h4>
+                Thomas<br>Lebrequier
+              </h4>
+              <p>Développeur fullstack <br> chez Wecom4U</p>
+            </div>
+          </div>
+          <div class="swiper-image" data-swiper-parallax-y="35%">
+            <div class="swiper-image-inner swiper-image-right relative" :class="'swiper-image-two'">
+              <p class="paragraph">
+                Je recommande Benjamin pour ses compétences techniques seniors sur les frameworks Vue.js (Nuxt), Laravel et ses profondes connaissances des langages du web en général. À ses côtés, j'ai pu apprendre énormément dans le développement d'applications web et de sites internet, de la conception au développement jusqu'à la mise en production.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--<beautiful-carousel-slide
           class-image-left="swiper-image-one"
           class-image-right="swiper-image-two"
           class="swiper-slide-one"
@@ -51,7 +68,7 @@
               Je recommande Benjamin pour ses compétences techniques seniors sur les frameworks Vue.js (Nuxt), Laravel et ses profondes connaissances des langages du web en général. À ses côtés, j'ai pu apprendre énormément dans le développement d'applications web et de sites internet, de la conception au développement jusqu'à la mise en production, le tout en méthode agile en utilisant le versioning (via Github).
             </p>
           </template>
-        </beautiful-carousel-slide>
+        </beautiful-carousel-slide>-->
       </div>
       <div class="swiper-pagination"></div>
     </div>
