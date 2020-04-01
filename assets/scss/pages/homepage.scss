@@ -40,6 +40,9 @@
       }
 
       @media screen and (max-width: $screen-md) {
+        height: 500px;
+      }
+      @media screen and (max-width: $screen-sm) {
         height: 300px;
       }
 

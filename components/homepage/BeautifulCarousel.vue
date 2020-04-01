@@ -98,24 +98,19 @@
 <style>
   /** purgecss start ignore */
   .slider-homepage {
-    height: 50vh;
+    height: 450px;
     width: 100%;
     position: relative;
   }
 
   @media screen and (max-width: 1440px) {
     .slider-homepage {
-      height: 45vh;
-    }
-  }
-  @media screen and (max-width: 1024px) {
-    .slider-homepage {
-      height: 30vh;
+      height: 400px;
     }
   }
   @media screen and (max-width: 768px) {
     .slider-homepage {
-      height: 52vh;
+      height: 600px;
     }
   }
   @media screen and (max-width: 576px) {
@@ -152,13 +147,10 @@
   @media screen and (max-width: 768px) {
     .slider-homepage .swiper-image {
       width: 100%;
-    }
-  }
-  @media screen and (max-width: 576px) {
-    .slider-homepage .swiper-image {
       height: 100%;
     }
   }
+
   .slider-homepage .swiper-image-inner {
     background-size: cover;
     background-position: center center;
@@ -172,7 +164,7 @@
   .slider-homepage .swiper-image-inner.swiper-image-left {
     padding: 4rem;
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 991px) {
     .slider-homepage .swiper-image-inner.swiper-image-left {
       padding: 2.5rem 2rem;
     }
