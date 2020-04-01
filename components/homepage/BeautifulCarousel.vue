@@ -96,7 +96,7 @@
 </script>
 
 <style>
-  /*! purgecss start ignore */
+  /** purgecss start ignore */
 
 
   .slider-homepage {
@@ -445,7 +445,7 @@
     position: absolute;
   }
 
-  /*! purgecss end ignore */
+  /** purgecss end ignore */
 
 
 </style>
