@@ -24,9 +24,6 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
-    script: [
-      { src: '/js/swiper.min.js'}
-    ]
   },
   /*
   ** Customize the progress bar color

@@ -17,6 +17,7 @@ export default async ({ app, store })  => {
     mounted() {
       loadScript('/js/bezier-easing.min.js')
       loadScript('/js/TweenMax.min.js')
+      loadScript('/js/swiper.min.js')
     },
   })
 }
