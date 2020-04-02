@@ -98,7 +98,7 @@
 
         <bubbles-component></bubbles-component>
       </div>
-      <div class="homepage-part-4 mt-10 mb-56">
+      <div class="homepage-part-4 mt-32 mb-56">
         <div class="text-center mb-12 md:mb-24 sub-title">
           J'ai travaillé avec eux
         </div>
