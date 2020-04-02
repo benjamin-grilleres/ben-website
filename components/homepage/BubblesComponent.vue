@@ -65,6 +65,9 @@
       display: inline-block;
       position: relative;
 
+      @media screen and (max-width: 768px) {
+        margin: 18px;
+      }
 
 
       &:nth-child(even) {
