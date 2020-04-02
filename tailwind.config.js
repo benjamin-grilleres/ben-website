@@ -25,7 +25,10 @@ module.exports = {
       },
       colors: {
         'black': '#2E3029',
-        'grey' : '#f5f5f5'
+        'grey' : '#f5f5f5',
+        'green': '#41b883',
+        'light-blue': '#1bbcb9',
+        'dark-blue': '#35495e'
       },
       fontFamily: {
         'avenir-bold': ['AvenirNextBold'],

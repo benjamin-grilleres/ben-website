@@ -74,7 +74,31 @@
         </div>
 
       </div>
-      <div class="homepage-part-3 mt-10 mb-56">
+      <div class="homepage-part-3  mb-30">
+        <div class="mb-12">
+          <div class="text-center mb-6 sub-title">
+            Toutes mes compétences
+          </div>
+          <!--<div class="text-lg text-center mb-10">
+            <span class="text-green font-avenir-bold">En vert </span> les technologies que j'utilise régulièrement, <span class="text-dark-blue font-avenir-bold">en bleu foncé </span> les technologies déjà utilisées en entreprise, <span class="text-light-blue font-avenir-bold">en bleu clair </span> les compétences annexes au développement
+          </div>-->
+          <div class="text-lg text-center">
+            <div class="mb-3">
+              <span class="text-green font-avenir-bold">En vert </span> les technologies que j'utilise régulièrement
+            </div>
+            <div class="mb-3">
+              <span class="text-dark-blue font-avenir-bold">En bleu foncé </span> les technologies déjà utilisées en entreprise
+            </div>
+            <div>
+              <span class="text-light-blue font-avenir-bold">En bleu clair </span> les compétences annexes au développement
+            </div>
+
+          </div>
+        </div>
+
+        <bubbles-component></bubbles-component>
+      </div>
+      <div class="homepage-part-4 mt-10 mb-56">
         <div class="text-center mb-12 md:mb-24 sub-title">
           J'ai travaillé avec eux
         </div>
@@ -91,12 +115,14 @@ import ArrowLeft from '@/static/icons/right.svg?inline'
 import Animate from '~/plugins/animations/animate.js'
 import {mapGetters} from 'vuex'
 import BeautifulCarousel from "../components/homepage/BeautifulCarousel";
+import BubblesComponent from "../components/homepage/BubblesComponent";
 const MEDIA_MAX_IMAGE = 991;
 
 export default {
 
 
   components: {
+    BubblesComponent,
     BeautifulCarousel,
     ArrowLeft
   },
