@@ -1,11 +1,11 @@
 <template>
   <div class="article-experience section">
     <div class="flex flex-wrap" :class="{'flex-row-reverse': reverse}">
-      <div class="col-12 col-md-5 col-xl-6 z-20 transition ease-in-out duration-300 custom-padding">
-        <div v-bckg-img="image" style="background-position:top;" class="bg-no-repeat bg-100 article-experience-image">
+      <div class="col-12 col-md-5 col-xl-6 z-20 transition ease-in-out duration-300 custom-padding" data-fct="opacityAndLeft">
+        <div v-bckg-img="image" style="background-position:top;" class="bg-no-repeat bg-100 article-experience-image" data-fct="opacityAndLeft">
         </div>
       </div>
-      <div class="col-12 col-md-7 col-xl-6 custom-padding" >
+      <div class="col-12 col-md-7 col-xl-6 custom-padding" data-fct="opacityAndRight">
         <div class="flex justify-center h-full items-center ">
           <div class="col-12 col-sm-10">
             <div>
