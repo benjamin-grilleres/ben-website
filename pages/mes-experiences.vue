@@ -92,7 +92,37 @@
         ]
       },
         methods: {
+          buildFullpage() {
+            new fullpage('.mes-experiences', {
+              navigation: true,
+              scrollingSpeed: 450,
+              onLeave: (origin, destination, direction) => {
+                if ( !this.destination) {
+                  this.destination = destination;
+                  setTimeout( () => {
+                    this.destination = null;
+                  }, 800)
+                } else {
+                  return false;
+                }
 
+              },
+              afterLoad: (origin, destination, direction) => {
+                let $originElement = origin.item;
+                let $destinationElement = destination.item;
+
+                let $animatedElements = $originElement.querySelectorAll('.animation');
+                $animatedElements.forEach( $animatedEl => {
+                  $animatedEl.classList.remove('active');
+                })
+
+                let $animatedDestinationElements = $destinationElement.querySelectorAll('.animation');
+                $animatedDestinationElements.forEach( $animatedEl => {
+                  $animatedEl.classList.add('active');
+                })
+              },
+            });
+          }
         },
 
       data() {
@@ -106,42 +136,21 @@
         Animate.initClass(this.$el, window)
         this.$bus.$emit('displayTextUnderImage', true)
 
-        setTimeout( () => {
-          new fullpage('.mes-experiences', {
-            navigation: true,
-            scrollingSpeed: 450,
-            onLeave: (origin, destination, direction) => {
-              if ( !this.destination) {
-                this.destination = destination;
-                setTimeout( () => {
-                  this.destination = null;
-                }, 800)
-              } else {
-                return false;
-              }
+        if ( !this.$store.state.animations.fullPageLoaded ) {
+          setTimeout( this.buildFullpage,1000)
+          this.$store.commit('animations/setFullPageLoaded', true)
+        } else {
+          this.buildFullpage();
+        }
 
-            },
-            afterLoad: (origin, destination, direction) => {
-              let $originElement = origin.item;
-              let $destinationElement = destination.item;
 
-              let $animatedElements = $originElement.querySelectorAll('.animation');
-              $animatedElements.forEach( $animatedEl => {
-                $animatedEl.classList.remove('active');
-              })
 
-              let $animatedDestinationElements = $destinationElement.querySelectorAll('.animation');
-              $animatedDestinationElements.forEach( $animatedEl => {
-                $animatedEl.classList.add('active');
-              })
-            },
-          });
-        },1000)
+
 
       },
 
       destroyed() {
-        fullpage_api.destroy();
+        fullpage_api.destroy('all');
       }
     }
 </script>
