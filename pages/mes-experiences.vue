@@ -50,6 +50,7 @@
         title="Wecom4u"
         subtitle="Lead développeur - Mars 2019 à Mars 2020"
         image="/img/pages-experiences/wecom4u.png"
+        class="mb-10"
       >
         <div>
           <div class="mb-6">
