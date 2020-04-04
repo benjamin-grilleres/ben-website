@@ -24,6 +24,7 @@
         title="Tmic Ellipses"
         subtitle="Responsable Pôle Web - Juillet 2018 à Février 2019"
         image="/img/pages-experiences/tmic.png"
+        :reverse="true"
       >
         <div>
           <div class="mb-6">
@@ -47,7 +48,6 @@
         title="Wecom4u"
         subtitle="Lead développeur - Mars 2019 à Mars 2020"
         image="/img/pages-experiences/wecom4u.png"
-        :reverse="true"
       >
         <div>
           <div class="mb-6">
