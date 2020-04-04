@@ -125,12 +125,12 @@
               let $originElement = origin.item;
               let $destinationElement = destination.item;
 
-              let $animatedElements = $originElement.querySelectorAll('[data-fct]');
+              let $animatedElements = $originElement.querySelectorAll('.animation');
               $animatedElements.forEach( $animatedEl => {
                 $animatedEl.classList.remove('active');
               })
 
-              let $animatedDestinationElements = $destinationElement.querySelectorAll('[data-fct]');
+              let $animatedDestinationElements = $destinationElement.querySelectorAll('.animation');
               $animatedDestinationElements.forEach( $animatedEl => {
                 $animatedEl.classList.add('active');
               })
