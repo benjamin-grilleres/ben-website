@@ -90,3 +90,29 @@ html,body {
   }
 }
 
+.title-h1 {
+  font-size: 50px;
+  line-height: 55px;
+  @apply font-avenir-bold;
+
+  @media screen and (max-width: $screen-ipad-paysage) {
+    font-size: 40px;
+    line-height:45px;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+
+.title-h2 {
+  font-size: 20px;
+  @apply font-avenir-regular;
+}
+
+/** REMOVE UNUSED STYLE FULLPAGE.JS **/
+.fp-tableCell {
+  vertical-align: initial;
+}
+

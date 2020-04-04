@@ -28,7 +28,12 @@
           this.customClassNuxtComponent = this.$route.path !== '/' ? 'margin-top-navbar' : ''
         }, 600)
       }
+    },
+
+    mounted() {
+      this.customClassNuxtComponent = this.$route.path !== '/' ? 'margin-top-navbar' : ''
     }
+
 
   }
 </script>

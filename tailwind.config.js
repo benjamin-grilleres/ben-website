@@ -35,6 +35,9 @@ module.exports = {
         'avenir-regular': ['AvenirNextRegular'],
         'avenir-medium': ['AvenirNextMedium'],
       },
+      backgroundSize: {
+          '100': '100%'
+      }
     },
     lineHeight: {
       'none': '1',

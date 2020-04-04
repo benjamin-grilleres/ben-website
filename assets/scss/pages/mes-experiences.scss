@@ -1,0 +1,9 @@
+.mes-experiences {
+  .custom-padding {
+    padding: 0 !important;
+  }
+
+  .article-experience-image {
+    height: calc( 100vh - #{$marginTopNavbar} )
+  }
+}
