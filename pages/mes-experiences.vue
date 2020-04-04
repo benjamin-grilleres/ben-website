@@ -4,6 +4,7 @@
         title="Bubbleflat"
         subtitle="Développeur fullstack - Avril 2017 à Juin 2018"
         image="/img/pages-experiences/bubbleflat.jpg"
+        class="mb-6"
       >
         <div>
           <div class="mb-6">
@@ -25,6 +26,7 @@
         subtitle="Responsable Pôle Web - Juillet 2018 à Février 2019"
         image="/img/pages-experiences/tmic.png"
         :reverse="true"
+        class="mb-6"
       >
         <div>
           <div class="mb-6">
@@ -96,6 +98,7 @@
             new fullpage('.mes-experiences', {
               navigation: true,
               scrollingSpeed: 450,
+              responsiveSlides: true,
               onLeave: (origin, destination, direction) => {
                 if ( !this.destination) {
                   this.destination = destination;
@@ -122,6 +125,21 @@
                 })
               },
             });
+          },
+          buildFullpageOnResize() {
+            if ( window.innerWidth > 767 ) {
+              this.buildFullpage();
+            } else {
+              fullpage_api.destroy('all');
+              this.setAnimatedElements()
+            }
+          },
+
+          setAnimatedElements() {
+            let $animatedElements = this.$el.querySelectorAll('.animation')
+            $animatedElements.forEach( $item => {
+              $item.classList.add('active');
+            })
           }
         },
 
@@ -136,21 +154,28 @@
         Animate.initClass(this.$el, window)
         this.$bus.$emit('displayTextUnderImage', true)
 
-        if ( !this.$store.state.animations.fullPageLoaded ) {
-          setTimeout( this.buildFullpage,1000)
+        if ( window.innerWidth < 767 ) {
           this.$store.commit('animations/setFullPageLoaded', true)
+          this.setAnimatedElements()
         } else {
-          this.buildFullpage();
+          if ( !this.$store.state.animations.fullPageLoaded ) {
+            setTimeout( this.buildFullpage,1000)
+            this.$store.commit('animations/setFullPageLoaded', true)
+          } else {
+            this.buildFullpage();
+          }
         }
 
-
-
+        setTimeout( () => {
+          window.addEventListener('resize',this.buildFullpageOnResize)
+        }, 1000)
 
 
       },
 
       destroyed() {
         fullpage_api.destroy('all');
+        window.removeEventListener('resize',this.buildFullpageOnResize)
       }
     }
 </script>
