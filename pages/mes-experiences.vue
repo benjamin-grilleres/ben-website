@@ -3,7 +3,7 @@
       <article-experience
         title="Bubbleflat"
         subtitle="Développeur fullstack - Avril 2016 à Juin 2017"
-        image="/img/pages-experiences/bubbleflat.png"
+        image="/img/pages-experiences/bubbleflat.jpg"
       >
         <div>
           <div class="mb-6">
