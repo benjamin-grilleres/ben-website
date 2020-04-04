@@ -116,6 +116,10 @@
             });
           },1000)
 
+        },
+
+        destroyed() {
+          fullpage_api.destroy();
         }
     }
 </script>
