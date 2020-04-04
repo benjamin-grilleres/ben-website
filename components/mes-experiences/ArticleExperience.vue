@@ -1,8 +1,8 @@
 <template>
   <div class="article-experience section">
     <div class="flex flex-wrap" :class="{'flex-row-reverse': reverse}">
-      <div class="col-12 col-md-5 col-xl-6 z-20 transition ease-in-out duration-300 custom-padding" data-fct="opacityAndLeft">
-        <div v-bckg-img="image" style="background-position:top;" class="bg-no-repeat bg-100 article-experience-image" data-fct="opacityAndLeft">
+      <div class="col-12 col-md-5 col-xl-6 z-20 custom-padding" data-fct="opacityAndLeft">
+        <div v-bckg-img="image" style="background-position:top;" class="bckg-img article-experience-image" data-fct="opacityAndRight">
         </div>
       </div>
       <div class="col-12 col-md-7 col-xl-6 custom-padding" data-fct="opacityAndRight">

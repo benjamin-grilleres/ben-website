@@ -4,6 +4,10 @@
   }
 
   .article-experience-image {
-    height: calc( 100vh - #{$marginTopNavbar} )
+    height: calc( 100vh - #{$marginTopNavbar} );
+
+    @media screen and (max-width: 1231px) {
+      height: calc( 100vh - 102px )
+    }
   }
 }

@@ -30,7 +30,11 @@ html,body {
 }
 
 .margin-top-navbar {
-  margin-top: $marginTopNavbar
+  margin-top: $marginTopNavbar;
+
+  @media screen and (max-width: 1231px) {
+    margin-top: 102px;
+  }
 }
 
 .animated-link {
@@ -86,6 +90,16 @@ html,body {
 
   &:hover {
     background: $black_light;
+    color: white;
+  }
+}
+.btn-purple {
+  @extend .btn;
+  border: 2px solid #632684;
+  background: white;
+
+  &:hover {
+    background: #632684;
     color: white;
   }
 }
