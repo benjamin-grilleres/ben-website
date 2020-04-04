@@ -52,4 +52,7 @@
     height: 100%;
     width: 100%;
   }
+  .fp-tableCell {
+    vertical-align: initial !important;
+  }
 </style>
