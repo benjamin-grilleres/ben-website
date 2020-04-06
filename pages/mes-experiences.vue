@@ -87,9 +87,9 @@
       components: {ArticleExperience, ArrowLeft},
 
       head: {
-          script: [
+          /*script: [
             {src:'/js/fullpage.min.js'}
-          ],
+          ],*/
         link: [
           { rel: 'stylesheet', href: '/js/fullpage.min.css' }
         ]
@@ -159,18 +159,13 @@
           this.$store.commit('animations/setFullPageLoaded', true)
           this.setAnimatedElements()
         } else {
+          this.buildFullpage();
           if ( !this.$store.state.animations.fullPageLoaded ) {
-            setTimeout( this.buildFullpage,1000)
             this.$store.commit('animations/setFullPageLoaded', true)
-          } else {
-            this.buildFullpage();
           }
         }
 
-        setTimeout( () => {
-          window.addEventListener('resize',this.buildFullpageOnResize)
-        }, 1000)
-
+        window.addEventListener('resize',this.buildFullpageOnResize)
 
       },
 
