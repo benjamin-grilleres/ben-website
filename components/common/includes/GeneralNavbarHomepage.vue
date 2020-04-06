@@ -80,7 +80,7 @@
           },
           {
             text: 'Portfolio',
-            url: '/'
+            url: '/portfolio'
           },
           {
             text: 'Contact',

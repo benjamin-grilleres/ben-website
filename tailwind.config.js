@@ -37,7 +37,10 @@ module.exports = {
       },
       backgroundSize: {
           '100': '100%'
-      }
+      },
+      zIndex: {
+        '-1': '-1',
+      },
     },
     lineHeight: {
       'none': '1',

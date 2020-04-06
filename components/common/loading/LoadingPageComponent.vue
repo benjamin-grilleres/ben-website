@@ -46,7 +46,7 @@
       },
 
       mounted() {
-        if ( process.env.NODE_ENV === 'production' ) {
+        if ( process.env.NODE_ENV !== 'production' ) {
           this.sendEventAfterTypingComplete()
         } else {
           new Typed('.content-loading', this.options);
