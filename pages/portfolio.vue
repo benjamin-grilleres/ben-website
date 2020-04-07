@@ -26,7 +26,7 @@
             </div>
             <div class="col-sm-6" data-fct="opacityAndRight">
               <p class="title-h1-portfolio mb-12">{{ project.title }}</p>
-              <p v-html="project.content" class="text-lg mb-6">
+              <p v-html="project.content" class="text-lg mb-10">
               </p>
               <div class="flex flex-wrap">
                 <div
