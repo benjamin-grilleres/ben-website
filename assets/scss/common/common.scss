@@ -29,6 +29,13 @@ html,body {
   }
 }
 
+.top-navbar {
+  top: $marginTopNavbar;
+
+  @media screen and (max-width: 1231px) {
+    top: 102px;
+  }
+}
 .margin-top-navbar {
   margin-top: $marginTopNavbar;
 

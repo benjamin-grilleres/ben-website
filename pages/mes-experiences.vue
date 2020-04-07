@@ -87,9 +87,6 @@
       components: {ArticleExperience, ArrowLeft},
 
       head: {
-          /*script: [
-            {src:'/js/fullpage.min.js'}
-          ],*/
         link: [
           { rel: 'stylesheet', href: '/js/fullpage.min.css' }
         ]
