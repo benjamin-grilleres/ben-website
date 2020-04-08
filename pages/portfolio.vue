@@ -1,10 +1,7 @@
 <template>
     <div class="portfolio">
-      <div class="flex justify-center items-center fixed-filters">
+     <!-- <div class="flex justify-center items-center fixed-filters">
         Trier les projets par entreprise :
-       <!-- <button class="custom-btn-filter mr-3">Bubbleflat</button>
-        <button class="custom-btn-filter mr-3">TMIC</button>
-        <button class="custom-btn-filter mr-3">Wecom4u</button>-->
         <div
           v-for="(filter,key) in filters"
           :key="'filter-' +key"
@@ -12,32 +9,39 @@
           <input type="radio" class="hidden" :id="filter" :value="filter" v-model="filterActive"/>
           <label @click="filterProject(filter)" :for="filter" class="custom-btn-filter mx-3 cursor-pointer" :class="{'active': filterActive === filter}">{{ filter }}</label>
         </div>
-      </div>
-      <div class="pt-32">
-        <div class="container">
-          <div
-            v-for="(project,key2) in projects"
-            :key="'project-' + project.title"
-            class="row justify-center mb-20"
-            :class="{'flex-row-reverse':key2 % 2 === 0}"
-          >
-            <div class="col-sm-6" data-fct="opacityAndLeft">
-              <img :src="project.img" alt="" width="100%">
-            </div>
-            <div class="col-sm-6" data-fct="opacityAndRight">
-              <p class="title-h1-portfolio mb-12">{{ project.title }}</p>
-              <p v-html="project.content" class="text-lg mb-10">
-              </p>
-              <div class="flex flex-wrap">
-                <div
-                  v-for="(techno) in project.technos"
-                  :key="'project-' + project.title + 'techno-' +techno"
-                  class="mr-3 mb-3 bg-dark-blue py-2 px-4 text-white "
-                >#{{ techno }}</div>
+      </div>-->
+      <h1 class="title-h1 text-center py-16">Mes projets</h1>
+      <div>
+        <div
+          v-for="(project,key2) in projects"
+          :key="'project-' + project.title"
+          :style="project.color ? 'background:' + project.color : 'background-image: url(' + project.background +')'"
+        >
+          <div class="container py-20">
+            <div class="row justify-center items-center"
+                 :class="{'flex-row-reverse':key2 % 2 === 0}">
+              <div class="col-sm-6" data-fct="opacityAndLeft">
+                <a v-if="project.external_url" :href="project.external_url" target="_blank">
+                  <img :src="project.img" alt="" width="100%" class="image-url">
+                </a>
+                <img v-else :src="project.img" alt="" width="100%">
               </div>
+              <div class="col-sm-6" data-fct="opacityAndRight">
+                <p class="title-h1-portfolio mb-12 text-white">{{ project.title }}</p>
+                <p v-html="project.content" class="text-lg mb-10 text-white">
+                </p>
+                <div class="flex flex-wrap">
+                  <div
+                    v-for="(techno) in project.technos"
+                    :key="'project-' + project.title + 'techno-' +techno"
+                    class="mr-3 mb-3 bg-white py-2 px-4 text-black"
+                  >#{{ techno }}</div>
+                </div>
 
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

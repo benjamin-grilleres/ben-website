@@ -32,4 +32,12 @@
     z-index:2;
     background:white
   }
+
+  .image-url {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
