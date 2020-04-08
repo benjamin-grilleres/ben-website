@@ -69,5 +69,12 @@ export default [
     content: 'Application interne permettant de partager rapidement des articles et des ressources (polices, mockups etc...).',
     technos: ['Laravel', 'Vue.js', 'Nuxt.js', 'Mysql', 'Spatie']
   },
+  {
+    company: 'Wecom4u',
+    img: '/img/portfolio/ejt.png',
+    title: 'EJT Toulouse',
+    content: 'Site web interne à l\'école de journalisme de Toulouse permettant aux étudiants et professeurs de créer et partager des articles, postuler à des offres d\'emploi et accéder à un annuaire de l\'école.',
+    technos: ['Laravel', 'Vue.js', 'Nuxt.js', 'Mysql', 'Spatie']
+  },
 
 ]

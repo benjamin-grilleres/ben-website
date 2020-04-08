@@ -1,5 +1,5 @@
 <template>
-    <div class="portfolio" style="height:3000px">
+    <div class="portfolio">
       <div class="flex justify-center items-center fixed-filters">
         Trier les projets par entreprise :
        <!-- <button class="custom-btn-filter mr-3">Bubbleflat</button>
@@ -90,11 +90,12 @@
             this.$router.push({query: queryParams})
 
             setTimeout( () => {
-              let $animatedElements = this.$el.querySelectorAll('[data-fct]');
+              let $animatedElements = this.$el.querySelectorAll('[data-fct]')
 
               $animatedElements.forEach( $animatedEl => {
-                $animatedEl.classList.add('active');
+                  $animatedEl.classList.add('active');
               })
+              window.scrollTo(0,0);
 
             },300)
           },

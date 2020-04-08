@@ -44,7 +44,7 @@ html,body {
   }
 }
 
-.animated-link {
+.animated-link, .nuxt-link-exact-active {
   position: relative;
 
   &:after {
@@ -58,7 +58,7 @@ html,body {
     transition: width 0.3s ease-in-out;
   }
 
-  &:hover:after {
+  &:hover:after, &.nuxt-link-exact-active:after {
     width: 100%;
   }
 }
@@ -136,4 +136,5 @@ html,body {
 .fp-tableCell {
   vertical-align: initial !important;
 }
+
 
