@@ -67,10 +67,10 @@
              </div>
             <div class="row">
               <div class="col-12 text-center mt-8">
-                <button class="btn-black" v-scroll-to="'.homepage-part-2'">
+                <nuxt-link class="btn-black" to="/portfolio">
                   <ArrowLeft class="with-arrow"></ArrowLeft>
                   {{ $t('index.part_2.call_to_action') }}
-                </button>
+                </nuxt-link>
               </div>
             </div>
 

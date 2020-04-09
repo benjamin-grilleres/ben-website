@@ -10,7 +10,7 @@
           <label @click="filterProject(filter)" :for="filter" class="custom-btn-filter mx-3 cursor-pointer" :class="{'active': filterActive === filter}">{{ filter }}</label>
         </div>
       </div>-->
-      <h1 class="title-h1 text-center py-16">Mes projets</h1>
+      <h1 class="title-h1 text-center py-16">Mes projets <template v-if="$route.query.f">chez {{ $route.query.f }}</template></h1>
       <div>
         <div
           v-for="(project,key2) in projects"
@@ -81,12 +81,19 @@
             }
         },
 
+      watch: {
+          '$route'() {
+            this.filterProject()
+          }
+      },
+
         methods: {
-          filterProject(filter) {
+          filterProject() {
             let projects = [...this.allProjects];
+            let filter = this.$route.query.f;
 
             let queryParams = {};
-            if ( filter !== 'Tous' ) {
+            if ( filter ) {
               queryParams = {f: filter};
               projects = this.allProjects.filter( p => p.company === filter)
             }
