@@ -3,6 +3,7 @@
     <general-navbar-homepage></general-navbar-homepage>
     <nuxt :class="customClassNuxtComponent"/>
     <custom-cursor></custom-cursor>
+    <footer-credits></footer-credits>
   </layout-loading>
 </template>
 
@@ -13,8 +14,9 @@
   import GeneralNavbarHomepage from "../components/common/includes/GeneralNavbarHomepage";
   import LayoutLoading from "../components/common/loading/LayoutLoading";
   import CustomCursor from "../components/common/includes/CustomCursor";
+  import FooterCredits from "../components/common/includes/FooterCredits";
   export default {
-    components: {CustomCursor, LayoutLoading, GeneralNavbarHomepage},
+    components: {FooterCredits, CustomCursor, LayoutLoading, GeneralNavbarHomepage},
 
     data() {
       return {

@@ -44,7 +44,7 @@ html,body {
   }
 }
 
-.animated-link, .nuxt-link-exact-active {
+.animated-link, .nuxt-link-exact-active:not(.no-animation) {
   position: relative;
 
   &:after {
@@ -58,7 +58,7 @@ html,body {
     transition: width 0.3s ease-in-out;
   }
 
-  &:hover:after, &.nuxt-link-exact-active:not(.no-animation):after {
+  &:hover:after, &.nuxt-link-exact-active:after {
     width: 100%;
   }
 }

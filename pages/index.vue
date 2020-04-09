@@ -10,11 +10,11 @@
           <div class="col-12 col-sm-10">
             <div>
               <h1 class="title-h1 mb-6">Hello, moi c'est Benjamin !</h1>
-              <h2 class="title-h2 mb-8">Je suis <span class="font-avenir-bold">développeur web fullstack </span> spécialisé sur Laravel, Vue.js et Nuxt.js</h2>
+              <h2 class="title-h2 mb-8">Je suis <span class="font-avenir-bold">développeur web fullstack freelance</span> spécialisé sur Laravel, Vue.js et Nuxt.js</h2>
               <div>
-                <button class="btn-black" v-scroll-to="'.homepage-part-2'">
+                <button class="btn-black" v-scroll-to="'.homepage-part-5'">
                   <ArrowLeft class="with-arrow"></ArrowLeft>
-                  En savoir plus
+                  Travaillons ensemble !
                 </button>
               </div>
             </div>
@@ -98,11 +98,35 @@
 
         <bubbles-component></bubbles-component>
       </div>
-      <div class="homepage-part-4 mt-32 mb-56">
+      <div class="homepage-part-4 my-32">
         <div class="text-center mb-12 md:mb-24 sub-title">
           J'ai travaillé avec eux
         </div>
        <beautiful-carousel></beautiful-carousel>
+      </div>
+      <div class="homepage-part-5 mb-32">
+
+        <div class="text-center mb-6 sub-title">
+          Contactez-moi
+        </div>
+        <div class="row justify-center mb-12">
+          <div class="col-12 col-sm-9">
+            <div class="text-lg text-center">
+              Une question sur mon profil, une proposition de mission ou un simple bonjour, vous pouvez me contacter soit par mail soit sur Linkedin.
+            </div>
+          </div>
+        </div>
+        <div class="row justify-center">
+          <div class="col-12 col-sm-4">
+            <img src="/img/beautiful-linkedin.svg" width="60px" height="60px" class="inline-block mr-4"/>
+            <a href="https://linkedin.com/in/benjamin-grilleres-283530124" target="_blank" class="animated-link text-xl font-avenir-medium inline-block">Mon linkedin</a>
+          </div>
+          <div class="col-12 col-sm-4">
+            <img src="/img/beautiful-mail.png" width="60px" height="60px" class="inline-block mr-4"/>
+            <a href="mailto:contact@benjamingrilleres.com" class="animated-link text-xl font-avenir-medium inline-block">Mon mail</a>
+          </div>
+        </div>
+
       </div>
     </div>
 
