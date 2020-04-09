@@ -72,5 +72,19 @@ export default {
       paragraph_4: 'En quelques mots, je retiens de cette expérience que ma véritable passion outre le développement, c\'est le partage des connaissances avec d\'autres développeurs et le fait d\'échanger avec eux pour apprendre toujours plus.',
       call_to_action: 'Voir les différents projets réalisés'
     }
+  },
+  projects: {
+    title: 'Mes projets',
+    at: 'chez',
+    bubbleflat: 'Bubbleflat est une application web qui permet aux étudiants et jeunes actifs de se regrouper par affinités ou modes de vie pour trouver un logement.',
+    wefiles4u: 'Application interne permettant de partager rapidement des articles et des ressources (polices, mockups etc...).',
+    batiminute: 'Application web et mobile permettant de réserver du matériel de BTP.',
+    studnhouse: 'Après le pivot en Janvier 2018, Bubbleflat a changé de business et s\'est adressé aux écoles afin de proposer la plateforme en marque blanche.',
+    ejt: 'Site web interne à l\'école de journalisme de Toulouse permettant aux étudiants et professeurs de créer et partager des articles, postuler à des offres d\'emploi et accéder à un annuaire de l\'école.',
+    lafayette_conseil: 'Lafayette Conseil présente tous les services du groupe Lafayette ainsi que ses dernières actualités.',
+    lafayette_jeminstalle: 'Dans la même lignée que Lafayette Conseil, Lafayette je m\'installe permet de découvrir aux pharmacies indépendantes l\'intérêt de rejoindre le groupe Lafayette.',
+    rossini: 'Maison de ventes aux enchères depuis 1979, cette page permet de faire estimer gratuitement ses biens par un expert.',
+    siloe: 'La librairie Siloe Lis est une librairie généraliste et spécialisée dans la littérature religieuse.',
+    pincerais: 'La librairie du Pincerais avait besoin à court terme d\'être présent sur Internet afin de vendre des livres ailleurs qu\'en magasin.',
   }
 }

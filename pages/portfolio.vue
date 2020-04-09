@@ -10,7 +10,7 @@
           <label @click="filterProject(filter)" :for="filter" class="custom-btn-filter mx-3 cursor-pointer" :class="{'active': filterActive === filter}">{{ filter }}</label>
         </div>
       </div>-->
-      <h1 class="title-h1 text-center py-16">Mes projets <template v-if="$route.query.f">chez {{ $route.query.f }}</template></h1>
+      <h1 class="title-h1 text-center py-16">{{ $t('projects.title')}} <template v-if="$route.query.f"> {{ ' ' + $t('projects.at') + ' ' +$route.query.f }}</template></h1>
       <div>
         <div
           v-for="(project,key2) in projects"
@@ -28,7 +28,7 @@
               </div>
               <div class="col-md-6" data-fct="opacityAndRight">
                 <p class="title-h1-portfolio mb-12 text-white text-center md:text-left mt-6 md:mt-0">{{ project.title }}</p>
-                <p v-html="project.content" class="text-lg mb-10 text-white text-center md:text-left">
+                <p v-html="$t('projects.' + project.slug)" class="text-lg mb-10 text-white text-center md:text-left">
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-start">
                   <div
