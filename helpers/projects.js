@@ -1,7 +1,7 @@
 export default [
   {
     company: 'Bubbleflat',
-    img: '/img/portfolio/background/bubbleflat.png',
+    img: '/img/portfolio/background/bubbleflat.jpg',
     external_url: 'https://bubbleflat.com',
     title: 'Bubbleflat',
     color: '#C57373',
@@ -38,7 +38,7 @@ export default [
   {
     company: 'Wecom4u',
     color: '#C3BDBD',
-    img: '/img/portfolio/background/ejt.png',
+    img: '/img/portfolio/background/ejt.jpg',
     title: 'EJT Toulouse',
     content: 'Site web interne à l\'école de journalisme de Toulouse permettant aux étudiants et professeurs de créer et partager des articles, postuler à des offres d\'emploi et accéder à un annuaire de l\'école.',
     technos: ['Laravel', 'Vue.js', 'Nuxt.js', 'Mysql', 'Spatie']
@@ -46,7 +46,7 @@ export default [
   {
     company: 'Wecom4u',
     color: '#E68B58',
-    img: '/img/portfolio/background/lafayette-conseil.png',
+    img: '/img/portfolio/background/lafayette-conseil.jpg',
     external_url: 'https://lafayetteconseil.com/',
     title: 'Lafayette Conseil',
     content: 'Lafayette Conseil présente tous les services du groupe Lafayette ainsi que ses dernières actualités.',
@@ -54,7 +54,7 @@ export default [
   },
   {
     company: 'Wecom4u',
-    img: '/img/portfolio/background/lafayette-jeminstalle.png',
+    img: '/img/portfolio/background/lafayette-jeminstalle.jpg',
     external_url: 'https://jeminstalle.pharmacielafayette.com/',
     title: 'Lafayette je m\'installe',
     color: '#85B931',
@@ -63,7 +63,7 @@ export default [
   },
   {
     company: 'Wecom4u',
-    img: '/img/portfolio/rossini.png',
+    img: '/img/portfolio/background/rossini.jpg',
     external_url: 'https://rossini-estimations.com/',
     title: 'Rossini estimations',
     color: '#E9A960',
@@ -72,7 +72,7 @@ export default [
   },
   {
     company: 'Tmic',
-    img: '/img/portfolio/background/siloe.png',
+    img: '/img/portfolio/background/siloe.jpg',
     color: '#7F91C1',
     external_url: 'https://www.librairie-siloe-lis-nantes.fr/',
     title: 'Librairie Siloe Lis Nantes',
@@ -81,7 +81,7 @@ export default [
   },
   {
     company: 'Tmic',
-    img: '/img/portfolio/background/pincerais.png',
+    img: '/img/portfolio/background/pincerais.jpg',
     color: '#A85B71',
     external_url: 'https://librairiedupincerais.fr',
     title: 'Librairie du Pincerais',
