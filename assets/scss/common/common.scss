@@ -58,7 +58,7 @@ html,body {
     transition: width 0.3s ease-in-out;
   }
 
-  &:hover:after, &.nuxt-link-exact-active:after {
+  &:hover:after, &.nuxt-link-exact-active:not(.no-animation):after {
     width: 100%;
   }
 }

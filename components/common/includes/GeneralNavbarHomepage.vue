@@ -1,8 +1,8 @@
 <template>
-  <div class="fixed w-full z-40 lg:z-10 py-6 navbar-animated" :class="[displayText ? 'bg-white shadow-navbar' : 'bg-white', classActive ? 'active' : '' ]">
+  <div class="fixed w-screen z-40 lg:z-10 py-6 navbar-animated" :class="[displayText ? 'bg-white shadow-navbar' : 'bg-white', classActive ? 'active' : '' ]">
     <div class="justify-end items-center navbar-desktop hidden md:flex">
       <div :class="[displayText ? 'col-4 col-xxl-3 opacity-100' : 'col-xl-8 col-5 opacity-0']"  class="transition ease-in-out duration-300 pr-0">
-        <nuxt-link to="/">
+        <nuxt-link to="/" class="no-animation">
           <span class="font-avenir-bold text-xl">Benjamin Grilleres </span> <span class="hidden xl:inline-block">-</span> <span class="block xl:inline-block">Développeur Web Fullstack</span>
         </nuxt-link>
       </div>
@@ -84,7 +84,7 @@
           },
           {
             text: 'Contact',
-            url: '/'
+            url: '/contact'
           },
         ],
         displayText: false,

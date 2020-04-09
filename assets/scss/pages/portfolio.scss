@@ -21,6 +21,11 @@
     @apply font-avenir-medium;
     font-size: 60px;
     line-height: 65px;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 48px;
+      line-height: 55px;
+    }
   }
 
   .fixed-filters {

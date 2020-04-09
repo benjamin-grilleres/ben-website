@@ -17,20 +17,20 @@
           :key="'project-' + project.title"
           :style="project.color ? 'background:' + project.color : 'background-image: url(' + project.background +')'"
         >
-          <div class="container py-20">
+          <div class="container py-10 sm:py-20">
             <div class="row justify-center items-center"
                  :class="{'flex-row-reverse':key2 % 2 === 0}">
-              <div class="col-sm-6" data-fct="opacityAndLeft">
+              <div class="col-sm-9 col-md-6" data-fct="opacityAndLeft">
                 <a v-if="project.external_url" :href="project.external_url" target="_blank">
                   <img :src="project.img" alt="" width="100%" class="image-url">
                 </a>
                 <img v-else :src="project.img" alt="" width="100%">
               </div>
-              <div class="col-sm-6" data-fct="opacityAndRight">
-                <p class="title-h1-portfolio mb-12 text-white">{{ project.title }}</p>
-                <p v-html="project.content" class="text-lg mb-10 text-white">
+              <div class="col-md-6" data-fct="opacityAndRight">
+                <p class="title-h1-portfolio mb-12 text-white text-center md:text-left mt-6 md:mt-0">{{ project.title }}</p>
+                <p v-html="project.content" class="text-lg mb-10 text-white text-center md:text-left">
                 </p>
-                <div class="flex flex-wrap">
+                <div class="flex flex-wrap justify-center md:justify-start">
                   <div
                     v-for="(techno) in project.technos"
                     :key="'project-' + project.title + 'techno-' +techno"

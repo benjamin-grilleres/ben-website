@@ -19,6 +19,7 @@ export default [
   {
     company: 'Wecom4u',
     img: '/img/portfolio/background/batiminute.png',
+    img_mobile: '/img/portfolio/background/batiminute_mobile.png',
     color: '#F5B31B',
     title: 'Batiminute',
     content: 'Application web et mobile permettant de réserver du matériel de BTP.',
@@ -27,6 +28,7 @@ export default [
   {
     company: 'Bubbleflat',
     img: '/img/portfolio/background/stud.png',
+    img_mobile: '/img/portfolio/background/stud_mobile.png',
     external_url: 'http://studnhouse.com',
     title: 'Studnhouse',
     background: '/img/portfolio/background/background_landing.jpg',
