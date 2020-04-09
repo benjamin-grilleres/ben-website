@@ -13,19 +13,15 @@
             <a href="https://linkedin.com/in/benjamin-grilleres-283530124"><img class="ml-4" src="/icons/linkedin-logo.svg" height="16px" width="16px"/></a>
             <a href="https://twitter.com/Waluigii"><img class="ml-4" src="/icons/twitter.svg" height="16px" width="16px"/></a>
           </div>
-          <div class="flex">
+          <div class="flex items-center">
             <nuxt-link
               :to="link.url"
               v-for="(link,key) in links"
               :key="'navbar-' + key"
               class="font-avenir-medium animated-link mx-6"
             >{{ link.text }}</nuxt-link>
+            <translate-component class="ml-3"></translate-component>
           </div>
-          <!--<div>
-            <nuxt-link to="/" class="font-avenir-bold">Traduire en anglais</nuxt-link>
-          </div>-->
-
-
         </div>
       </div>
     </div>
@@ -68,9 +64,10 @@
 
 <script>
 
+  import TranslateComponent from "./TranslateComponent";
   export default {
     name: "GeneralNavbarHomepage",
-
+    components: {TranslateComponent},
     data() {
       return {
         links: [

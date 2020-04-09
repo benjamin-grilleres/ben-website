@@ -1,5 +1,6 @@
 
 const env = require('dotenv').config();
+import Messages from './lang/index'
 
 module.exports = {
 
@@ -36,7 +37,27 @@ module.exports = {
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
-    '@nuxtjs/axios',
+    ['nuxt-i18n', {
+      defaultLocale: 'fr',
+      locales: [
+        {
+          code: 'en',
+          name: 'English',
+          icon: '/icons/icon-gb.png',
+          domain: 'en.dev.benjamingrilleres.com'
+        },
+        {
+          code: 'fr',
+          name: 'Français',
+          icon:  '/icons/icon-france.png',
+          domain: 'dev.benjamingrilleres.com'
+        }
+      ],
+      differentDomains: (process.env.NODE_ENV === 'production'),
+      vueI18n: {
+        messages: Messages
+      }
+    }]
   ],
 
   pageTransition: 'fade',
@@ -52,11 +73,6 @@ module.exports = {
     { src: '~/plugins/bus.js'},
     { src: '~/plugins/loadScriptsAnimation.js', ssr: false},
   ],
-
-  axios: {
-    baseURL: process.env.BACKEND_URL,
-  },
-
 
   /*
   ** Build configuration

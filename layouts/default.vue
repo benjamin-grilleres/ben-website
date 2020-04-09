@@ -27,13 +27,14 @@
     watch: {
       '$route'() {
         setTimeout( () => {
-          this.customClassNuxtComponent = this.$route.path !== '/' ? 'margin-top-navbar' : ''
+
+          this.customClassNuxtComponent = !this.$route.name.includes('index') ? 'margin-top-navbar' : ''
         }, 600)
       }
     },
 
     mounted() {
-      this.customClassNuxtComponent = this.$route.path !== '/' ? 'margin-top-navbar' : ''
+      this.customClassNuxtComponent = !this.$route.name.includes('index') ? 'margin-top-navbar' : ''
     }
 
 

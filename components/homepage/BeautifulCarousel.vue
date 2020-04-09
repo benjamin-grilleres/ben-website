@@ -9,16 +9,13 @@
           linkedin="https://www.linkedin.com/in/thomas-lebrequier-developpeur/"
         >
           <template slot="bloc-left">
-            <h4>
-                Thomas<br>Lebrequier
+            <h4 v-html="$t('index.slider.slide1.title')">
             </h4>
-            <p>Développeur fullstack <br> chez Wecom4U</p>
+            <p v-html="$t('index.slider.slide1.subtitle')"></p>
           </template>
 
-          <p class="paragraph" slot="bloc-right">
-            Je recommande Benjamin pour ses compétences techniques seniors sur les frameworks Vue.js (Nuxt), Laravel et ses profondes connaissances des langages du web en général. À ses côtés, j'ai pu apprendre énormément dans le développement d'applications web et de sites internet, de la conception au développement jusqu'à la mise en production.
+          <p class="paragraph" slot="bloc-right" v-html="$t('index.slider.slide1.text')">
           </p>
-
         </beautiful-carousel-slide>
         <beautiful-carousel-slide
           class-image-left="swiper-image-three"
@@ -27,17 +24,15 @@
           linkedin="https://www.linkedin.com/in/nicolas-cont%C3%A9-6816b483/"
         >
           <template slot="bloc-left">
-            <h4 class="hover:underline">
-                Nicolas<br>Conté
+            <h4 v-html="$t('index.slider.slide2.title')">
             </h4>
-            <p>CEO Bubbleflat</p>
+            <p v-html="$t('index.slider.slide2.subtitle')"></p>
           </template>
-          <p class="paragraph" slot="bloc-right">
-            Benjamin a travaillé pour mon entreprise durant 2 ans. Je retiens que c’est une personne sur qui l’on peut compter, travailleur, soigneux tant dans son travail que dans les relations avec les autres salariés.
+          <p class="paragraph" slot="bloc-right" v-html="$t('index.slider.slide2.text')">
           </p>
 
         </beautiful-carousel-slide>
-        <beautiful-carousel-slide
+       <!-- <beautiful-carousel-slide
           class-image-left="swiper-image-five"
           class-image-right="swiper-image-six"
           class="swiper-slide-three"
@@ -51,7 +46,7 @@
               Je recommande Benjamin pour ses compétences techniques seniors sur les frameworks Vue.js (Nuxt), Laravel et ses profondes connaissances des langages du web en général. À ses côtés, j'ai pu apprendre énormément dans le développement d'applications web et de sites internet, de la conception au développement jusqu'à la mise en production, le tout en méthode agile en utilisant le versioning (via Github).
             </p>
           </template>
-        </beautiful-carousel-slide>
+        </beautiful-carousel-slide>-->
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -64,9 +59,12 @@
   import BeautifulCarouselSlide from "./BeautifulCarouselSlide";
     export default {
         name: "BeautifulCarousel",
-      components: {BeautifulCarouselSlide},
-      data() {
-            return {}
+
+        components: {BeautifulCarouselSlide},
+
+        data() {
+            return {
+            }
         },
 
         methods: {

@@ -9,12 +9,12 @@
         <div class="flex justify-center h-full items-center ">
           <div class="col-12 col-sm-10">
             <div>
-              <h1 class="title-h1 mb-6">Hello, moi c'est Benjamin !</h1>
-              <h2 class="title-h2 mb-8">Je suis <span class="font-avenir-bold">développeur web fullstack freelance</span> spécialisé sur Laravel, Vue.js et Nuxt.js</h2>
+              <h1 class="title-h1 mb-6">{{ $t('index.title')}}</h1>
+              <h2 class="title-h2 mb-8" v-html="$t('index.subtitle')"></h2>
               <div>
                 <button class="btn-black" v-scroll-to="'.homepage-part-5'">
                   <ArrowLeft class="with-arrow"></ArrowLeft>
-                  Travaillons ensemble !
+                  {{ $t('index.title_call_to_action')}}
                 </button>
               </div>
             </div>
@@ -29,7 +29,7 @@
           <div class="col-md-11 col-lg-8">
             <div class="text-center mb-12 md:mb-24">
             <span class="sub-title">
-              3 ans d'expérience et diplômé d'un Master en Développement Logiciel
+              {{ $t('index.master_degree') }}
             </span>
             </div>
           </div>
@@ -40,16 +40,20 @@
               </div>
               <div class="col-md-8 text-center md:text-left mt-10 md:mt-0">
                 <h3 class="title-h3 mb-5">
-                  Développement front et composants réutilisables
+                  {{ $t('index.part_2.title_1') }}
                 </h3>
-                <p class="text-lg">La conception par composants même dans le développement front a tout son intérêt pour maximiser la réutilisabilité et la maintenabilité d'un site.</p>
+                <p class="text-lg">{{ $t('index.part_2.text_1') }}</p>
               </div>
             </div>
 
             <div class="row justify-center md:justify-between items-center mb-16 md:mb-32 flex-col-reverse md:flex-row">
               <div class="col-md-8 text-center md:text-left mt-10 md:mt-0">
-                <h3 class="title-h3 mb-5">Conception d'architectures complexes</h3>
-                <p class="text-lg">Mes différentes expériences m'ont permis d'acquérir suffisament de compétences pour concevoir dans sa globalité des sites plus ou moins complexes et de proposer des solutions techniques aux problèmes que l'on peut rencontrer.</p>
+                <h3 class="title-h3 mb-5">
+                  {{ $t('index.part_2.title_2') }}
+                </h3>
+                <p class="text-lg">
+                  {{ $t('index.part_2.text_2') }}
+                </p>
               </div>
               <div class="col-8 col-md-3">
                 <img src="/img/tech/logos2.png" width="100%">
@@ -57,15 +61,15 @@
             </div>
             <div class="row justify-center">
               <div class="col-12">
-                <h3 class="title-h3 mb-5 text-center mb-6">Le développement ce n'est pas que coder</h3>
-                <p class="text-lg text-center">Le travail d'équipe est essentiel au bon déroulement des projets. Le pair programming et le code review sont des atouts majeurs pour faire progresser chaque développeur en apprenant toujours plus.</p>
+                <h3 class="title-h3 mb-5 text-center mb-6">{{ $t('index.part_2.title_3') }}</h3>
+                <p class="text-lg text-center">{{ $t('index.part_2.text_3') }} </p>
               </div>
              </div>
             <div class="row">
               <div class="col-12 text-center mt-8">
                 <button class="btn-black" v-scroll-to="'.homepage-part-2'">
                   <ArrowLeft class="with-arrow"></ArrowLeft>
-                  Voir mes projets
+                  {{ $t('index.part_2.call_to_action') }}
                 </button>
               </div>
             </div>
@@ -77,25 +81,17 @@
       <div class="homepage-part-3  mb-30">
         <div class="mb-12">
           <div class="text-center mb-6 sub-title">
-            Toutes mes compétences
+            {{ $t('index.part_3.title')}}
           </div>
-          <!--<div class="text-lg text-center mb-10">
-            <span class="text-green font-avenir-bold">En vert </span> les technologies que j'utilise régulièrement, <span class="text-dark-blue font-avenir-bold">en bleu foncé </span> les technologies déjà utilisées en entreprise, <span class="text-light-blue font-avenir-bold">en bleu clair </span> les compétences annexes au développement
-          </div>-->
           <div class="text-lg text-center">
-            <div class="mb-3">
-              <span class="text-green font-avenir-bold">En vert </span> les technologies que j'utilise régulièrement
+            <div class="mb-3" v-html="$t('index.part_3.text_1')">
             </div>
-            <div class="mb-3">
-              <span class="text-dark-blue font-avenir-bold">En bleu foncé </span> les technologies déjà utilisées en entreprise
+            <div class="mb-3" v-html="$t('index.part_3.text_2')">
             </div>
-            <div>
-              <span class="text-light-blue font-avenir-bold">En bleu clair </span> les compétences annexes au développement
+            <div v-html="$t('index.part_3.text_3')">
             </div>
-
           </div>
         </div>
-
         <bubbles-component></bubbles-component>
       </div>
       <div class="homepage-part-4 my-32">
@@ -107,23 +103,23 @@
       <div class="homepage-part-5 mb-32">
 
         <div class="text-center mb-6 sub-title">
-          Contactez-moi
+          {{ $t('index.part_5.title') }}
         </div>
         <div class="row justify-center mb-12">
           <div class="col-12 col-sm-9">
             <div class="text-lg text-center">
-              Une question sur mon profil, une proposition de mission ou un simple bonjour, vous pouvez me contacter soit par mail soit sur Linkedin.
+              {{ $t('index.part_5.text')}}
             </div>
           </div>
         </div>
         <div class="row justify-center">
-          <div class="col-12 col-sm-4">
+          <div class="col-12 col-sm-4 text-center">
             <img src="/img/beautiful-linkedin.svg" width="60px" height="60px" class="inline-block mr-4"/>
-            <a href="https://linkedin.com/in/benjamin-grilleres-283530124" target="_blank" class="animated-link text-xl font-avenir-medium inline-block">Mon linkedin</a>
+            <a href="https://linkedin.com/in/benjamin-grilleres-283530124" target="_blank" class="animated-link text-xl font-avenir-medium inline-block">{{ $t('index.part_5.text_linkedin')}}</a>
           </div>
-          <div class="col-12 col-sm-4">
+          <div class="col-12 col-sm-4 text-center">
             <img src="/img/beautiful-mail.png" width="60px" height="60px" class="inline-block mr-4"/>
-            <a href="mailto:contact@benjamingrilleres.com" class="animated-link text-xl font-avenir-medium inline-block">Mon mail</a>
+            <a href="mailto:contact@benjamingrilleres.com" class="animated-link text-xl font-avenir-medium inline-block">{{ $t('index.part_5.text_mail')}}</a>
           </div>
         </div>
 
@@ -193,6 +189,7 @@ export default {
 
 
   mounted() {
+    console.log(this.$i18n)
     Animate.initClass(this.$el, window)
     window.addEventListener('scroll',this.checkWindowScroll)
 
