@@ -42,12 +42,14 @@ module.exports = {
       locales: [
         {
           code: 'en',
+          iso: 'en-US',
           name: 'English',
           icon: '/icons/icon-gb.png',
           domain: 'en.dev.benjamingrilleres.com'
         },
         {
           code: 'fr',
+          iso: 'fr-FR',
           name: 'Français',
           icon:  '/icons/icon-france.png',
           domain: 'dev.benjamingrilleres.com'
@@ -56,7 +58,9 @@ module.exports = {
       differentDomains: (process.env.NODE_ENV === 'production'),
       vueI18n: {
         messages: Messages
-      }
+      },
+      //baseUrl: '',
+      seo: true
     }]
   ],
 

@@ -33,7 +33,7 @@
           <div class="mb-6" v-html="$t('jobs.tmic.paragraph_3')">
           </div>
           <div class="font-avenir-medium">
-            <nuxt-link to="/portfolio?f=Tmic" class="btn-purple">
+            <nuxt-link to="/projects?f=Tmic" class="btn-purple">
               <ArrowLeft class="with-arrow"></ArrowLeft>
               {{ $t('jobs.tmic.call_to_action')}}
             </nuxt-link>
@@ -56,7 +56,7 @@
           <div class="mb-6 font-avenir-medium"  v-html="$t('jobs.wecom.paragraph_4')">
           </div>
           <div class="font-avenir-medium">
-            <nuxt-link to="/portfolio?f=Wecom4u" class="btn-black">
+            <nuxt-link to="/projects?f=Wecom4u" class="btn-black">
               <ArrowLeft class="with-arrow"></ArrowLeft>
               {{ $t('jobs.wecom.call_to_action')}}
             </nuxt-link>
@@ -73,8 +73,16 @@
     import ArrowLeft from '@/static/icons/right.svg?inline'
     import Animate from '~/plugins/animations/animate.js'
     export default {
-        name: "mes-experiences",
+      name: "mes-experiences",
+
       components: {ArticleExperience, ArrowLeft},
+
+      nuxtI18n: {
+        paths: {
+          en: '/jobs',
+          fr: '/mes-experiences'
+        }
+      },
 
       head: {
         link: [

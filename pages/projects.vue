@@ -53,6 +53,13 @@
     export default {
         name: "portfolio",
 
+        nuxtI18n: {
+          paths: {
+            en: '/projects',
+            fr: '/projets'
+          }
+        },
+
         asyncData({route}) {
           let filterActive = 'Tous'
           if ( route.query.f ) {

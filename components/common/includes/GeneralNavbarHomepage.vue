@@ -73,11 +73,11 @@
         links: [
           {
             text: 'Mes expériences',
-            url: '/mes-experiences'
+            url: '/jobs'
           },
           {
             text: 'Portfolio',
-            url: '/portfolio'
+            url: '/projects'
           },
         ],
         displayText: false,
