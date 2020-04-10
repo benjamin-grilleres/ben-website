@@ -67,7 +67,7 @@
              </div>
             <div class="row">
               <div class="col-12 text-center mt-8">
-                <nuxt-link class="btn-black" to="/projects">
+                <nuxt-link class="btn-black" :to="localePath('projects')">
                   <ArrowLeft class="with-arrow"></ArrowLeft>
                   {{ $t('index.part_2.call_to_action') }}
                 </nuxt-link>

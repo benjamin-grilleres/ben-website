@@ -33,7 +33,7 @@
           <div class="mb-6" v-html="$t('jobs.tmic.paragraph_3')">
           </div>
           <div class="font-avenir-medium">
-            <nuxt-link to="/projects?f=Tmic" class="btn-purple">
+            <nuxt-link :to="localePath('projects') + '?f=Tmic'" class="btn-purple">
               <ArrowLeft class="with-arrow"></ArrowLeft>
               {{ $t('jobs.tmic.call_to_action')}}
             </nuxt-link>
@@ -56,7 +56,7 @@
           <div class="mb-6 font-avenir-medium"  v-html="$t('jobs.wecom.paragraph_4')">
           </div>
           <div class="font-avenir-medium">
-            <nuxt-link to="/projects?f=Wecom4u" class="btn-black">
+            <nuxt-link :to="localePath('projects') + '?f=Wecom4u'" class="btn-black">
               <ArrowLeft class="with-arrow"></ArrowLeft>
               {{ $t('jobs.wecom.call_to_action')}}
             </nuxt-link>

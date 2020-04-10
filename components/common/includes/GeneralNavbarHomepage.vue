@@ -15,7 +15,7 @@
           </div>
           <div class="flex items-center">
             <nuxt-link
-              :to="link.url"
+              :to="localePath(link.url)"
               v-for="(link,key) in links"
               :key="'navbar-' + key"
               class="font-avenir-medium animated-link mx-6"
@@ -47,7 +47,7 @@
           :key="'navbar-mobile-' + key"
           class="item"
           >
-          <nuxt-link :to="link.url">{{ link.text }}</nuxt-link>
+          <nuxt-link :to="localePath(link.url)">{{ link.text }}</nuxt-link>
         </div>
         <div class="item flex">
             <a href=""><img src="/icons/github.svg" height="16px" width="16px"/></a>
@@ -73,11 +73,11 @@
         links: [
           {
             text: 'Mes expériences',
-            url: '/jobs'
+            url: 'jobs'
           },
           {
             text: 'Portfolio',
-            url: '/projects'
+            url: 'projects'
           },
         ],
         displayText: false,
