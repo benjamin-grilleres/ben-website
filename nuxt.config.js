@@ -45,22 +45,36 @@ module.exports = {
           iso: 'en-US',
           name: 'English',
           icon: '/icons/icon-gb.png',
-          domain: 'en.dev.benjamingrilleres.com'
+          //domain: 'en.dev.benjamingrilleres.com'
+          domain: 'en.i18n.local:3000'
         },
         {
           code: 'fr',
           iso: 'fr-FR',
           name: 'Français',
           icon:  '/icons/icon-france.png',
-          domain: 'dev.benjamingrilleres.com'
+          //domain: 'dev.benjamingrilleres.com'
+          domain: 'i18n.local:3000'
         }
       ],
-      differentDomains: (process.env.NODE_ENV === 'production'),
+      //differentDomains: (process.env.NODE_ENV === 'production'),
+      differentDomains: false,
       vueI18n: {
+        fallbackLocale: 'fr',
         messages: Messages
       },
-      //baseUrl: '',
-      seo: true
+      parsePages: true,
+      pages: {
+        jobs: {
+          en: '/jobs',
+          fr: '/mes-experiences'
+        },
+        projects: {
+          en: '/projects',
+          fr: '/projets'
+        }
+      }
+      //seo: true
     }]
   ],
 

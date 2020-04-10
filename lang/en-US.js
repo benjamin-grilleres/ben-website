@@ -1,3 +1,6 @@
 export default {
-  hello: 'heelooo'
+  index: {
+    title: 'Hi, i"m ben',
+  }
+
 }

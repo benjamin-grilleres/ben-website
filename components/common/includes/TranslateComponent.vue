@@ -1,15 +1,16 @@
 <template>
     <div>
-      <a
+      <nuxt-link
         v-for="locale in availableLocales"
-        :key="'locale-' + locale.code"
-        :href="switchLocalePath(locale.code)"
+        :key="locale.code"
+        :to="switchLocalePath(locale.code)"
       >
+
         <img
           :src="locale.icon"
           width="40px"
         >
-      </a>
+      </nuxt-link>
 
     </div>
 </template>
@@ -33,7 +34,11 @@
             }
         },
 
-        methods: {},
+        methods: {
+          setLocale(code) {
+            this.$i18n.setLocale(code);
+          }
+        },
 
         mounted() {
 

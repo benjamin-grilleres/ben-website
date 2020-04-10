@@ -77,13 +77,6 @@
 
       components: {ArticleExperience, ArrowLeft},
 
-      nuxtI18n: {
-        paths: {
-          en: '/jobs',
-          fr: '/mes-experiences'
-        }
-      },
-
       head: {
         link: [
           { rel: 'stylesheet', href: '/js/fullpage.min.css' }
