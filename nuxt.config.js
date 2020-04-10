@@ -45,22 +45,18 @@ module.exports = {
           iso: 'en-US',
           name: 'English',
           icon: '/icons/icon-gb.png',
-          domain: 'en.dev.benjamingrilleres.com'
         },
         {
           code: 'fr',
           iso: 'fr-FR',
           name: 'Français',
           icon:  '/icons/icon-france.png',
-          domain: 'dev.benjamingrilleres.com'
         }
       ],
       vueI18n: {
         fallbackLocale: 'fr',
         messages: Messages
       },
-
-      differentDomains: true
       //seo: true
     }]
   ],
