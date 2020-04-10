@@ -1,6 +1,6 @@
 <template>
     <div>
-      <!--<nuxt-link
+      <nuxt-link
         v-for="locale in availableLocales"
         :key="locale.code"
         :to="switchLocalePath(locale.code)"
@@ -10,18 +10,8 @@
           :src="locale.icon"
           width="40px"
         >
-      </nuxt-link>-->
-      <a
-        v-for="locale in availableLocales"
-        :key="locale.code"
-        :href="switchLocalePath(locale.code)"
-      >
+      </nuxt-link>
 
-        <img
-          :src="locale.icon"
-          width="40px"
-        >
-      </a>
     </div>
 </template>
 
