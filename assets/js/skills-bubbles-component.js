@@ -97,7 +97,7 @@ export default [
   },
   {
     color: '#1bbcb9',
-    text: 'Gestion d\'équipe'
+    text: 'Gestion d\'équipe',
   },
   {
     color: '#1bbcb9',

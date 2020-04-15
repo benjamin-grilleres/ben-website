@@ -10,7 +10,7 @@ Vue.directive('scroll-to', {
     bind(el, binding, vnode) {
         el.addEventListener('click', (e) => {
             let offsetTop = $(binding.value).offset().top;
-            $('html, body').animate({scrollTop: offsetTop - 100});
+            window.scrollTo(0,offsetTop - 100);
         })
     }
 })

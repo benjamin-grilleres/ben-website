@@ -20,7 +20,7 @@
               :key="'navbar-' + key"
               class="font-avenir-medium animated-link mx-6"
             >{{ link.text }}</nuxt-link>
-            <translate-component class="ml-3"></translate-component>
+            <!--<translate-component class="ml-3"></translate-component>-->
           </div>
         </div>
       </div>

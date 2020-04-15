@@ -10,13 +10,13 @@ export default {
       title_2: 'Design of complex architectures',
       text_2: 'Thanks to my previous jobs, I have enough skills to fully develop more or less complex sites and offer technical solutions to the problems that we may encounter',
       title_3: 'Development is not just coding',
-      text_3: 'Le travail d\'équipe est essentiel au bon déroulement des projets. Le pair programming et le code review sont des atouts majeurs pour faire progresser chaque développeur en apprenant toujours plus.',
+      text_3: 'Teamwork is essential to the smooth running of projects. Pair programming and code review are major assets for advancing each developer by always learning more.',
       call_to_action: 'Show my projects'
     },
     part_3: {
       title: 'My skills',
       text_1: ' <span class="text-green font-avenir-bold">Green : </span> technologies that I often use',
-      text_2: '<span class="text-dark-blue font-avenir-bold">Dark blue : </span> technologies already use in previous jobs',
+      text_2: '<span class="text-dark-blue font-avenir-bold">Dark blue : </span> technologies already used in previous jobs',
       text_3: '<span class="text-light-blue font-avenir-bold">Light blue : </span> Skills related to development',
     },
     part_4: {
@@ -26,7 +26,7 @@ export default {
       slide1: {
         title: 'Thomas<br>Lebrequier',
         subtitle: 'fullstack developer <br> at Wecom4u',
-        text: 'Je recommande Benjamin pour ses compétences techniques seniors sur les frameworks Vue.js (Nuxt), Laravel et ses profondes connaissances des langages du web en général. À ses côtés, j\'ai pu apprendre énormément dans le développement d\'applications web et de sites internet, de la conception au développement jusqu\'à la mise en production.',
+        text: 'I recommend Benjamin for his senior technical skills on the Vue.js(Nuxt) and Laravel frameworks and his knowledge of web languages in general. With him, I learned a lot in the development of applications and websites, from design to development, up to production.'
       },
       slide2: {
         title: 'Nicolas<br>Conté',
@@ -41,7 +41,7 @@ export default {
     },
     part_5: {
       title: 'Contact me',
-      text: 'Une question sur mon profil, une proposition de mission ou un simple bonjour, vous pouvez me contacter soit par mail soit sur Linkedin.',
+      text: 'Questions about my profile, work proposals, or a simple "hello", you can contact me by mail or join me on linkedin',
       text_linkedin: 'Linkedin',
       text_mail: 'Mail'
     }
@@ -50,10 +50,10 @@ export default {
     bubbleflat: {
       title: 'Bubbleflat',
       subtitle: 'Fullstack developer - April 2017 to June 2018',
-      paragraph_1: 'Bubbleflat est un outil de mise en relation destiné aux étudiants et aux jeunes actifs à la recherche du colocataire idéal, en fonction de différents critères : modes de vie, langues, année d\'étude.',
-      paragraph_2: 'J\'ai rejoint le projet en Avril 2016 au moment où l\'équipe était en train de se former. Ainsi j\'ai pu participer à la <span class="font-avenir-medium">conception technique </span> et à l\'<span class="font-avenir-medium">intégration visuelle </span> du nouveau site. Les fonctionnalités techniques principales étaient un <span class="font-avenir-medium">chat entre utilisateurs </span>, un <span class="font-avenir-medium"> algorithme de match </span> afin de proposer les profils qui correspondent le plus au nôtre et <span class="font-avenir-medium">une carte permettant d\'afficher les logements disponibles </span>.',
-      paragraph_3: 'Nous avons choisi avec l\'équipe de démarrer avec des technologies peu connues mais maintenues par la communauté : <span class="font-avenir-medium">Laravel </span>en back et <span class="font-avenir-medium">Vue.js</span> en front. Les serveurs étaient hébergés dans un premier temps sur <span class="font-avenir-medium"> OVH </span> puis sur <span class="font-avenir-medium"> AWS </span>. La gestion des serveurs et des sites se faisait via <span class="font-avenir-medium"> Laravel Forge </span>.',
-      call_to_action: 'Voir le site'
+      paragraph_1: 'Bubbleflat is a platform for students and young professionnals looking for the perfect roomate based on various criteria : lifestyles, languages, studies.',
+      paragraph_2: 'I joined the project in April 2016, when the team was being created. So I participated in the technical design and development of the new site. The main features were a chat between users, a match algorithm that purposes profiles which correspond most to ours and a map which displays the accommodation available for flat-sharing.',
+      paragraph_3: 'We have chosen with the team to start with little known technologies but maintained by the community : Laravel and Vue.js. Servers were initially hosted on OVH then on AWS. Server management was done by Laravel Forge.',
+      call_to_action: 'Show website'
     },
     tmic: {
       title: 'Tmic Ellipses',
