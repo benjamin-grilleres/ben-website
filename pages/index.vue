@@ -2,7 +2,7 @@
   <section class="homepage" >
     <div class="flex flex-wrap homepage-part-1">
       <div class="col-12 col-md-5 col-xl-6 z-20 transition ease-in-out duration-300 custom-padding" ref="benImage"  :class="hideImageOnScroll ? 'opacity-0' : 'opacity-100'">
-        <div v-bckg-img="'/img/ben.jpg'" class="bckg-img ben-image" :class="{'active':runAnimation}">
+        <div v-bckg-img="'/img/ben_2.jpg'" class="bckg-img ben-image" :class="{'active':runAnimation}">
         </div>
       </div>
       <div class="col-12 col-md-7 col-xl-6 opacityAndRight custom-padding mt-12 md:mt-0 text-center md:text-left" style="transition-delay:250ms" :class="{'active':runAnimation}">

@@ -68,23 +68,27 @@
       @media screen and (max-width: 768px) {
         margin: 18px;
       }
-
-
-      &:nth-child(even) {
-        top: -15px;
-        //animation: rot-counter-clockwise 10s linear infinite;
-      }
-      &:nth-child(odd) {
-        top: 15px;
-        //animation: rot-clockwise 10s linear infinite;
+      @media screen and (max-width: 576px) {
+        margin: 8px;
       }
 
-      &.rot-counter-clockwise {
-        animation: rot-counter-clockwise 10s linear infinite;
+
+      @media screen and (min-width: 577px) {
+        &:nth-child(even) {
+          top: -15px;
+        }
+        &:nth-child(odd) {
+          top: 15px;
+        }
+
+        &.rot-counter-clockwise {
+          animation: rot-counter-clockwise 10s linear infinite;
+        }
+        &.rot-clockwise {
+          animation: rot-clockwise 10s linear infinite;
+        }
       }
-      &.rot-clockwise {
-        animation: rot-clockwise 10s linear infinite;
-      }
+
     }
 
     @keyframes rot-clockwise {
