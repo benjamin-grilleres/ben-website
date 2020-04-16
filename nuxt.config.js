@@ -1,5 +1,6 @@
 
 const env = require('dotenv').config();
+import Messages from './lang/index'
 
 module.exports = {
 
@@ -14,16 +15,19 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
-      { hid: 'og-title', property: 'og:title', content: ''},
-      { hid: 'og-description', property: 'og:description', content: ''},
+      { hid: 'description', name: 'description', content: 'Diplômé d\'un Master en Développement Logiciel et 3 ans d\'expérience, j\'ai acquis suffisament de compétences pour réaliser des projets plus ou moins complexes.' },
+      { hid: 'og-title', property: 'og:title', content: 'Benjamin Grilleres - Développeur Freelance Laravel, Vue.js, Nuxt.js'},
+      { hid: 'og-description', property: 'og:description', content: 'Diplômé d\'un Master en Développement Logiciel et 3 ans d\'expérience, j\'ai acquis suffisament de compétences pour réaliser des projets plus ou moins complexes.'},
       { hid: 'og-type', property: 'og:type', content: 'website'},
-      { hid: 'og-url', property: 'og:url', content: ''},
-      { hid: 'og-image', property: 'og:image', content: ''}
+      { hid: 'og-url', property: 'og:url', content: 'https://benjamingrilleres.com'},
+      { hid: 'og-image', property: 'og:image', content: 'https://benjamingrilleres.com/img/ben.jpg'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
+    script: [
+      {src:'/js/fullpage.min.js'}
+    ]
   },
   /*
   ** Customize the progress bar color
@@ -33,7 +37,28 @@ module.exports = {
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
-    '@nuxtjs/axios',
+    ['nuxt-i18n', {
+      defaultLocale: 'fr',
+      locales: [
+        {
+          code: 'en',
+          iso: 'en-US',
+          name: 'English',
+          icon: '/icons/icon-gb.png',
+        },
+        {
+          code: 'fr',
+          iso: 'fr-FR',
+          name: 'Français',
+          icon:  '/icons/icon-france.png',
+        }
+      ],
+      vueI18n: {
+        fallbackLocale: 'fr',
+        messages: Messages
+      },
+      //seo: true
+    }],
   ],
 
   pageTransition: 'fade',
@@ -49,11 +74,6 @@ module.exports = {
     { src: '~/plugins/bus.js'},
     { src: '~/plugins/loadScriptsAnimation.js', ssr: false},
   ],
-
-  axios: {
-    baseURL: process.env.BACKEND_URL,
-  },
-
 
   /*
   ** Build configuration

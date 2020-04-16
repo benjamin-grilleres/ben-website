@@ -1,26 +1,27 @@
 <template>
-  <article class="item flex items-center">
-    <div class="col-sm-6 bckg-img h-full" v-bckg-img="image" style="background-position:top;">
-    </div>
-    <div class="col-sm-6 item__content">
-      <h2 class="item__content-title mb-10">{{ title }}</h2>
-      <a class="item__content-back">back</a>
+  <div class="article-experience section">
+    <div class="flex flex-wrap" :class="{'flex-row-reverse': reverse}">
+      <div class="col-12 col-md-5 col-xl-6 z-20 custom-padding">
+        <div v-bckg-img="image" class="bckg-img article-experience-image opacityAndLeft animation bg-center">
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-xl-6 custom-padding opacityAndRight animation">
+        <div class="flex justify-center h-full items-center ">
+          <div class="col-12 col-sm-10 mt-6 sm:mt-0">
+            <div>
+              <h1 class="title-h1">{{title}}</h1>
+              <h2 class="title-h2 mb-8">{{ subtitle }}</h2>
+              <div class="font-avenir-regular">
+                <slot></slot>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <h3 class="item__content-subtitle">{{ subtitle }}</h3>
-      <div class="item__content-text">
-        <slot></slot>
       </div>
     </div>
-    <!--<div class="item__img" v-bckg-img="image"></div>
-    <div class="item__content">
-      <a class="item__content-back">back</a>
-      <h2 class="item__content-title">{{ title }}</h2>
-      <h3 class="item__content-subtitle">{{ subtitle }}</h3>
-      <div class="item__content-text">
-        <slot></slot>
-      </div>
-    </div>-->
-  </article>
+
+  </div>
 </template>
 
 <script>
@@ -30,7 +31,8 @@
         props: [
           'image',
           'title',
-          'subtitle'
+          'subtitle',
+          'reverse'
         ],
 
         data() {
@@ -46,5 +48,11 @@
 </script>
 
 <style scoped>
-
+  .article-experience {
+    height: 100%;
+    width: 100%;
+  }
+  .fp-tableCell {
+    vertical-align: initial !important;
+  }
 </style>

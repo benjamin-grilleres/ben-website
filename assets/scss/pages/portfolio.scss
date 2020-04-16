@@ -1,0 +1,48 @@
+.portfolio {
+  background: white;
+  .custom-btn-filter {
+    transition: background 0.3s ease-in-out, color 0.2s ease-in-out;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $black;
+    color: $black;
+    background: white;
+
+    &:hover, &.active {
+      background: $black;
+      color: white;
+    }
+  }
+
+  .title-h1-portfolio {
+    @apply font-avenir-medium;
+    font-size: 60px;
+    line-height: 65px;
+
+    @media screen and (max-width: $screen-ipad-paysage) {
+      font-size: 48px;
+      line-height: 55px;
+    }
+  }
+
+  .fixed-filters {
+    position: fixed;
+    @extend .top-navbar;
+    left:0;
+    width: 100%;
+    padding: 20px 0;
+    z-index:2;
+    background:white
+  }
+
+  .image-url {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

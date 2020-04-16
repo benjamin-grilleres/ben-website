@@ -1,19 +1,30 @@
 .homepage {
-
+  background: white;
   .homepage-part-1 {
-    .title-h1 {
-      font-size: 50px;
-      line-height: 55px;
-      @apply font-avenir-bold;
+
+    @media screen and (max-width: $screen-lg) {
+      margin-top: 160px;
     }
 
-    .title-h2 {
-      font-size: 20px;
-      @apply font-avenir-regular;
-    }
 
     .ben-image {
       background-color: $black;
+      height: 100vh;
+
+      @media screen and (max-width: $screen-xl) {
+        height: 600px;
+      }
+
+      @media screen and (max-width: $screen-lg) {
+        height: 400px
+      }
+
+      @media screen and (max-width: $screen-md) {
+        height: 500px;
+      }
+      @media screen and (max-width: $screen-sm) {
+        height: 300px;
+      }
 
       opacity: 0;
       left: -40px;
@@ -28,10 +39,21 @@
         opacity: 0;
       }
     }
+
+    .custom-padding {
+      padding: 0 !important;
+
+      @media screen and (max-width: $screen-lg) {
+        padding: 0 15px !important;
+      }
+    }
   }
 
   .homepage-part-2 {
-
+      .title-h3 {
+        font-size: 25px;
+        @apply font-avenir-medium;
+      }
   }
 
   .sub-title {
@@ -39,7 +61,10 @@
     position: relative;
     @apply font-avenir-bold;
 
-
+    @media screen and (max-width: $screen-md) {
+      font-size: 28px;
+      line-height: 38px;
+    }
   }
 
 

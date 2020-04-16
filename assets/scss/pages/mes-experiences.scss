@@ -1,0 +1,17 @@
+.mes-experiences {
+  .custom-padding {
+    padding: 0 !important;
+  }
+
+  .article-experience-image {
+    height: calc( 100vh - #{$marginTopNavbar} );
+
+    @media screen and (max-width: 1231px) {
+      height: calc( 100vh - 102px )
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      height: 300px;
+    }
+  }
+}

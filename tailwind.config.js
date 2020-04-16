@@ -14,23 +14,34 @@ module.exports = {
       '16': '16px',
       '1/2': '50%'
     },
+    screens: {
+      sm: '576px',
+      md: '768px',
+      lg: '992px',
+      ipad: '1024px',
+      xl: '1200px',
+      '2xl': '1440px'
+    },
+    colors: {
+      'black': '#2E3029',
+      'grey' : '#f5f5f5',
+      'green': '#41b883',
+      'light-blue': '#1bbcb9',
+      'dark-blue': '#35495e',
+      'white': '#ffffff'
+    },
+    fontFamily: {
+      'avenir-bold': ['AvenirNextBold'],
+      'avenir-regular': ['AvenirNextRegular'],
+      'avenir-medium': ['AvenirNextMedium'],
+    },
     extend: {
-      screens: {
-        sm: '576px',
-        md: '768px',
-        lg: '992px',
-        ipad: '1024px',
-        xl: '1200px',
-        '2xl': '1440px'
+      backgroundSize: {
+          '100': '100%'
       },
-      colors: {
-        'black': '#2E3029',
-        'grey' : '#f5f5f5'
-      },
-      fontFamily: {
-        'avenir-bold': ['AvenirNextBold'],
-        'avenir-regular': ['AvenirNextRegular'],
-        'avenir-medium': ['AvenirNextMedium'],
+      zIndex: {
+        '-1': '-1',
+        '100': '100'
       },
     },
     lineHeight: {
