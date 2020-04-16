@@ -58,7 +58,7 @@ module.exports = {
         messages: Messages
       },
       //seo: true
-    }]
+    }],
   ],
 
   pageTransition: 'fade',
