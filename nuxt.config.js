@@ -59,7 +59,14 @@ module.exports = {
       },
       //seo: true
     }],
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    '@nuxtjs/google-analytics'
   ],
+
+  googleAnalytics: {
+    id: 'UA-163798379-1'
+  },
 
   pageTransition: 'fade',
 
