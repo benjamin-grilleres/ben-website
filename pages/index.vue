@@ -143,6 +143,11 @@ const MEDIA_MAX_IMAGE = 991;
 
 export default {
 
+  head () {
+    return {
+      title: 'Benjamin Grilleres - Développeur Freelance Laravel, Vue.js, Nuxt.js',
+    }
+  },
 
   components: {
     BubblesComponent,
@@ -192,7 +197,6 @@ export default {
 
 
   mounted() {
-    console.log(this.$i18n)
     Animate.initClass(this.$el, window)
     window.addEventListener('scroll',this.checkWindowScroll)
 

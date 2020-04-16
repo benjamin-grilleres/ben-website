@@ -53,6 +53,12 @@
     export default {
         name: "portfolio",
 
+        head () {
+          return {
+            title: 'Benjamin Grilleres - Mes projets réalisés',
+          }
+        },
+
         asyncData({route}) {
           let filterActive = 'Tous'
           if ( route.query.f ) {

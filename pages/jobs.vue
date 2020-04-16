@@ -77,10 +77,13 @@
 
       components: {ArticleExperience, ArrowLeft},
 
-      head: {
-        link: [
-          { rel: 'stylesheet', href: '/js/fullpage.min.css' }
-        ]
+      head () {
+        return {
+          title: 'Benjamin Grilleres - Mes expériences',
+          link: [
+            { rel: 'stylesheet', href: '/js/fullpage.min.css' }
+          ]
+        }
       },
         methods: {
           buildFullpage() {
