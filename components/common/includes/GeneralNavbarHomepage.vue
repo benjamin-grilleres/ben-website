@@ -9,9 +9,9 @@
       <div  :class="[displayText ? 'col-8 col-xxl-9' : 'col-xl-6 col-7']" class="custom-col-animation">
         <div class="flex w-full items-center justify-between relative social" :class="{'active' : displayText }">
           <div class="flex lg:ml-4">
-            <a href="https://github.com/benjamin-grilleres"><img src="/icons/github.svg" height="16px" width="16px"/></a>
-            <a href="https://linkedin.com/in/benjamin-grilleres-283530124"><img class="ml-4" src="/icons/linkedin-logo.svg" height="16px" width="16px"/></a>
-            <a href="https://twitter.com/Waluigii"><img class="ml-4" src="/icons/twitter.svg" height="16px" width="16px"/></a>
+            <a target="_blank" href="https://github.com/benjamin-grilleres"><img src="/icons/github.svg" height="16px" width="16px"/></a>
+            <a target="_blank" href="https://linkedin.com/in/benjamin-grilleres-283530124"><img class="ml-4" src="/icons/linkedin-logo.svg" height="16px" width="16px"/></a>
+            <a target="_blank" href="https://twitter.com/Waluigii"><img class="ml-4" src="/icons/twitter.svg" height="16px" width="16px"/></a>
           </div>
           <div class="flex items-center">
             <nuxt-link

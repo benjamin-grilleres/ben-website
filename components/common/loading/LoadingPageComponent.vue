@@ -11,12 +11,11 @@
   import Typed from 'typed.js';
 
   const sentences = [
-    ['Vous savez, moi je ne crois pas qu’il\'y ait de bonne ou de mauvaise situation'],
+    ['Vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation'],
     ["L'innovation, c'est une situation qu'on choisit parce qu'on a une passion brûlante pour quelque chose."],
     ["Dans le monde il y a 10 types de personnes, ceux qui comprennent le binaire, et les autres."],
     ["La gastronomie est l'art d'utiliser la nourriture pour créer le bonheur."],
     ["Un homme doit vivre de façon à pouvoir dire chaque soir, je n’ai pas perdu ma journée."],
-    ["Un jour, je serais le meilleur dresseur."]
   ]
 
   let randomSentence = Math.floor(Math.random() * Math.floor(sentences.length - 1))

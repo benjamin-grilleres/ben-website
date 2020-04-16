@@ -26,7 +26,7 @@
     <div class="container">
       <div class="homepage-part-2 mt-20">
         <div class="row justify-center">
-          <div class="col-md-11 col-lg-8">
+          <div class="col-md-11 col-lg-8" data-fct="opacity">
             <div class="text-center mb-12 md:mb-24">
             <span class="sub-title">
               {{ $t('index.master_degree') }}
@@ -35,10 +35,10 @@
           </div>
           <div class=" col-12 col-lg-10 mb-32">
             <div class="row justify-center md:justify-between items-center mb-16 md:mb-32">
-              <div class="col-8 col-md-3">
+              <div class="col-8 col-md-3" data-fct="opacityAndLeft">
                 <img src="/img/tech/logos.png" width="100%">
               </div>
-              <div class="col-md-8 text-center md:text-left mt-10 md:mt-0">
+              <div class="col-md-8 text-center md:text-left mt-10 md:mt-0" data-fct="opacityAndRight" data-delay="200">
                 <h3 class="title-h3 mb-5">
                   {{ $t('index.part_2.title_1') }}
                 </h3>
@@ -47,7 +47,7 @@
             </div>
 
             <div class="row justify-center md:justify-between items-center mb-16 md:mb-32 flex-col-reverse md:flex-row">
-              <div class="col-md-8 text-center md:text-left mt-10 md:mt-0">
+              <div class="col-md-8 text-center md:text-left mt-10 md:mt-0" data-fct="opacityAndLeft" data-delay="200">
                 <h3 class="title-h3 mb-5">
                   {{ $t('index.part_2.title_2') }}
                 </h3>
@@ -55,7 +55,7 @@
                   {{ $t('index.part_2.text_2') }}
                 </p>
               </div>
-              <div class="col-8 col-md-3">
+              <div class="col-8 col-md-3" data-fct="opacityAndRight">
                 <img src="/img/tech/logos2.png" width="100%">
               </div>
             </div>
@@ -79,7 +79,7 @@
 
       </div>
       <div class="homepage-part-3  mb-30">
-        <div class="mb-12">
+        <div class="mb-12" data-fct="opacity">
           <div class="text-center mb-6 sub-title">
             {{ $t('index.part_3.title')}}
           </div>
@@ -102,22 +102,25 @@
       </div>
       <div class="homepage-part-5 mb-32">
 
-        <div class="text-center mb-6 sub-title">
-          {{ $t('index.part_5.title') }}
-        </div>
-        <div class="row justify-center mb-12">
-          <div class="col-12 col-sm-9">
-            <div class="text-lg text-center">
-              {{ $t('index.part_5.text')}}
+        <div data-fct="opacityAndBottom">
+          <div class="text-center mb-6 sub-title" >
+            {{ $t('index.part_5.title') }}
+          </div>
+          <div class="row justify-center mb-12">
+            <div class="col-12 col-sm-9">
+              <div class="text-lg text-center">
+                {{ $t('index.part_5.text')}}
+              </div>
             </div>
           </div>
         </div>
+
         <div class="row justify-center">
-          <div class="col-12 col-sm-4 text-center">
+          <div class="col-12 col-sm-4 text-center" data-fct="opacityAndLeft" data-delay="300">
             <img src="/img/beautiful-linkedin.svg" width="60px" height="60px" class="inline-block mr-4"/>
             <a href="https://linkedin.com/in/benjamin-grilleres-283530124" target="_blank" class="animated-link text-xl font-avenir-medium inline-block">{{ $t('index.part_5.text_linkedin')}}</a>
           </div>
-          <div class="col-12 col-sm-4 text-center">
+          <div class="col-12 col-sm-4 text-center" data-fct="opacityAndRight" data-delay="300">
             <img src="/img/beautiful-mail.png" width="60px" height="60px" class="inline-block mr-4"/>
             <a href="mailto:contact@benjamingrilleres.com" class="animated-link text-xl font-avenir-medium inline-block">{{ $t('index.part_5.text_mail')}}</a>
           </div>

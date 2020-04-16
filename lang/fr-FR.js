@@ -1,7 +1,7 @@
 export default {
   index: {
     title: 'Hello, moi c\'est Benjamin !',
-    subtitle: 'Je suis <span class="font-avenir-bold">développeur web fullstack freelance</span> spécialisé sur Laravel, Vue.js et Nuxt.js',
+    subtitle: 'Je suis <span class="font-avenir-bold">développeur web fullstack freelance</span> spécialisé sur Laravel, Vue.js et Nuxt.js à Toulouse',
     title_call_to_action: 'Travaillons ensemble !',
     master_degree: "3 ans d'expérience et diplômé d'un Master en Développement Logiciel",
     part_2: {

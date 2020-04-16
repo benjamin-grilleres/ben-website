@@ -20,7 +20,7 @@ export default class {
     this.scale = 1;
     this.lastScale = 1;
     this.lastY = 0;
-    console.log(this);
+
     requestAnimationFrame(() => this.render());
   }
 

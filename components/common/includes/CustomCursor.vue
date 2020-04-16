@@ -34,12 +34,14 @@
 
           window.addEventListener('resize', this.calcWinsize);
           window.addEventListener('mousemove', ev => this.refreshMousePos(ev));
+          window.addEventListener('scroll', ev => this.refreshMousePos(ev))
 
         },
 
       destroyed() {
           window.removeEventListener('resize', this.calcWinsize);
           window.removeEventListener('mousemove', this.refreshMousePos)
+          window.removeEventListener('scroll', this.refreshMousePos)
       }
     }
 </script>
