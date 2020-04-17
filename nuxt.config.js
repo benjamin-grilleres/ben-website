@@ -64,6 +64,10 @@ module.exports = {
     '@nuxtjs/google-analytics'
   ],
 
+  sitemap: {
+    hostname: 'https://benjamingrilleres.com',
+  },
+
   googleAnalytics: {
     id: 'UA-163798379-1'
   },
