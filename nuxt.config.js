@@ -66,6 +66,10 @@ module.exports = {
 
   sitemap: {
     hostname: 'https://benjamingrilleres.com',
+    gzip: true,
+    exclude: [
+      '/en/**'
+    ],
   },
 
   googleAnalytics: {
