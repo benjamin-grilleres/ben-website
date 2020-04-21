@@ -90,6 +90,7 @@
             new fullpage('.mes-experiences', {
               navigation: true,
               scrollingSpeed: 450,
+              licenceKey: 'tGxfRCR^e6',
               responsiveSlides: true,
               onLeave: (origin, destination, direction) => {
                 if ( !this.destination) {
