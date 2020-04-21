@@ -27,7 +27,7 @@
                 <img v-else :src="project.img" alt="" width="100%">
               </div>
               <div class="col-md-6" data-fct="opacityAndRight">
-                <p class="title-h1-portfolio mb-12 text-white text-center md:text-left mt-6 md:mt-0">{{ project.title }}</p>
+                <h2 class="title-h1-portfolio mb-12 text-white text-center md:text-left mt-6 md:mt-0">{{ project.title }}</h2>
                 <p v-html="$t('projects.' + project.slug)" class="text-lg mb-10 text-white text-center md:text-left">
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-start">
@@ -56,6 +56,9 @@
         head () {
           return {
             title: 'Benjamin Grilleres - Mes projets réalisés',
+            meta: [
+              { hid: 'description', name: 'description', content: 'Liste des projets réalisés au cours de mes différentes expériences.' },
+            ]
           }
         },
 
