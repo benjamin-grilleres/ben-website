@@ -41,12 +41,12 @@ module.exports = {
     ['nuxt-i18n', {
       defaultLocale: 'fr',
       locales: [
-        {
-          code: 'en',
-          iso: 'en-US',
-          name: 'English',
-          icon: '/icons/icon-gb.png',
-        },
+        // {
+        //   code: 'en',
+        //   iso: 'en-US',
+        //   name: 'English',
+        //   icon: '/icons/icon-gb.png',
+        // },
         {
           code: 'fr',
           iso: 'fr-FR',
