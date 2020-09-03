@@ -90,7 +90,7 @@
             new fullpage('.mes-experiences', {
               navigation: true,
               scrollingSpeed: 450,
-              licenceKey: 'tGxfRCR^e6',
+              licenseKey: 'tGxfRCR^e6',
               responsiveSlides: true,
               onLeave: (origin, destination, direction) => {
                 if ( !this.destination) {
@@ -121,6 +121,7 @@
           },
           buildFullpageOnResize() {
             if ( window.innerWidth > 767 ) {
+              fullpage_api.destroy('all');
               this.buildFullpage();
             } else {
               fullpage_api.destroy('all');

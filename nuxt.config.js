@@ -6,6 +6,7 @@ module.exports = {
 
   env: env.parsed,
 
+  target: 'static',
 
   /*
   ** Headers of the page
