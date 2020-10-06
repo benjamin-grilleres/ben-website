@@ -120,13 +120,13 @@
             });
           },
           buildFullpageOnResize() {
-            if ( window.innerWidth > 767 ) {
-              fullpage_api.destroy('all');
-              this.buildFullpage();
-            } else {
-              fullpage_api.destroy('all');
-              this.setAnimatedElements()
-            }
+            // if ( window.innerWidth > 767 ) {
+            //   fullpage_api.destroy('all');
+            //   this.buildFullpage();
+            // } else {
+            //   fullpage_api.destroy('all');
+            //   this.setAnimatedElements()
+            // }
           },
 
           setAnimatedElements() {
@@ -147,6 +147,7 @@
       mounted() {
         Animate.initClass(this.$el, window)
         this.$bus.$emit('displayTextUnderImage', true)
+        //fullpage_api.destroy('all');
 
         if ( window.innerWidth < 767 ) {
           this.$store.commit('animations/setFullPageLoaded', true)
@@ -163,7 +164,6 @@
       },
 
       destroyed() {
-        fullpage_api.destroy('all');
         window.removeEventListener('resize',this.buildFullpageOnResize)
       }
     }
