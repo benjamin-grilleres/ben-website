@@ -24,7 +24,6 @@
 
 
             var scrollHandler = function() {
-                console.log('je scroll')
                     if( !self.didScroll ) {
                         self.didScroll = true;
                         setTimeout( () =>  { self._scrollPage(); }, 60 );
@@ -53,7 +52,6 @@
                 let nameAnim = item.el.getAttribute('data-fct');
                 let delay = item.el.getAttribute('data-delay');
                 if( this.inViewport( item.el, this.options.viewportFactor ) ) {
-                    console.log('in viewport')
                     if ( nameAnim && !item.visible) {
 
                         if ( delay)
