@@ -124,7 +124,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
   .navbar-animated {
     opacity: 0;
     left: 0;
@@ -193,8 +193,6 @@
       }
       &:nth-child(2) {
         top: 12px;
-        // width: 25px;
-        // left: 4px;
         -webkit-transform-origin: left center;
         -moz-transform-origin: left center;
         -o-transform-origin: left center;

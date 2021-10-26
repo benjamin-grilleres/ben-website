@@ -55,7 +55,7 @@
     }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="postcss">
   .content-loading {
     width: 768px;
     margin-left: auto;
