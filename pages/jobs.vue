@@ -1,20 +1,25 @@
 <template>
     <main class="mes-experiences">
       <article-experience
-        :title="$t('jobs.bubbleflat.title')"
-        :subtitle="$t('jobs.bubbleflat.subtitle')"
-        image="/img/pages-experiences/bubbleflat.jpg"
-        class="mb-6"
+        :title="$t('jobs.wecom.title')"
+        :subtitle="$t('jobs.wecom.subtitle')"
+        image="/img/pages-experiences/wecom4u.png"
+        class="mb-10"
       >
         <div>
-          <div class="mb-6" v-html="$t('jobs.bubbleflat.paragraph_1')">
+          <div class="mb-6" v-html="$t('jobs.wecom.paragraph_1')">
           </div>
-          <div class="mb-6" v-html="$t('jobs.bubbleflat.paragraph_2')">
+          <div class="mb-6"  v-html="$t('jobs.wecom.paragraph_2')">
           </div>
-          <div class="mb-6" v-html="$t('jobs.bubbleflat.paragraph_3')">
+          <div class="mb-6"  v-html="$t('jobs.wecom.paragraph_3')">
+          </div>
+          <div class="mb-6 font-avenir-medium"  v-html="$t('jobs.wecom.paragraph_4')">
           </div>
           <div class="font-avenir-medium">
-            <a href="https://bubbleflat.com" target="_blank" class="underline" style="color:#f07382">{{ $t('jobs.bubbleflat.call_to_action') }}</a>
+            <nuxt-link :to="localePath('projects') + '?f=Wecom4u'" class="btn-black">
+              <ArrowLeft class="with-arrow"></ArrowLeft>
+              {{ $t('jobs.wecom.call_to_action')}}
+            </nuxt-link>
           </div>
         </div>
       </article-experience>
@@ -41,29 +46,23 @@
         </div>
       </article-experience>
       <article-experience
-        :title="$t('jobs.wecom.title')"
-        :subtitle="$t('jobs.wecom.subtitle')"
-        image="/img/pages-experiences/wecom4u.png"
-        class="mb-10"
+        :title="$t('jobs.bubbleflat.title')"
+        :subtitle="$t('jobs.bubbleflat.subtitle')"
+        image="/img/pages-experiences/bubbleflat.jpg"
+        class="mb-6"
       >
         <div>
-          <div class="mb-6" v-html="$t('jobs.wecom.paragraph_1')">
+          <div class="mb-6" v-html="$t('jobs.bubbleflat.paragraph_1')">
           </div>
-          <div class="mb-6"  v-html="$t('jobs.wecom.paragraph_2')">
+          <div class="mb-6" v-html="$t('jobs.bubbleflat.paragraph_2')">
           </div>
-          <div class="mb-6"  v-html="$t('jobs.wecom.paragraph_3')">
-          </div>
-          <div class="mb-6 font-avenir-medium"  v-html="$t('jobs.wecom.paragraph_4')">
+          <div class="mb-6" v-html="$t('jobs.bubbleflat.paragraph_3')">
           </div>
           <div class="font-avenir-medium">
-            <nuxt-link :to="localePath('projects') + '?f=Wecom4u'" class="btn-black">
-              <ArrowLeft class="with-arrow"></ArrowLeft>
-              {{ $t('jobs.wecom.call_to_action')}}
-            </nuxt-link>
+            <a href="https://bubbleflat.com" target="_blank" class="underline" style="color:#f07382">{{ $t('jobs.bubbleflat.call_to_action') }}</a>
           </div>
         </div>
       </article-experience>
-
 
     </main>
 </template>
@@ -90,6 +89,7 @@
             new fullpage('.mes-experiences', {
               navigation: true,
               scrollingSpeed: 450,
+              licenseKey: 'tGxfRCR^e6',
               responsiveSlides: true,
               onLeave: (origin, destination, direction) => {
                 if ( !this.destination) {
@@ -119,12 +119,13 @@
             });
           },
           buildFullpageOnResize() {
-            if ( window.innerWidth > 767 ) {
-              this.buildFullpage();
-            } else {
-              fullpage_api.destroy('all');
-              this.setAnimatedElements()
-            }
+            // if ( window.innerWidth > 767 ) {
+            //   fullpage_api.destroy('all');
+            //   this.buildFullpage();
+            // } else {
+            //   fullpage_api.destroy('all');
+            //   this.setAnimatedElements()
+            // }
           },
 
           setAnimatedElements() {
@@ -145,6 +146,7 @@
       mounted() {
         Animate.initClass(this.$el, window)
         this.$bus.$emit('displayTextUnderImage', true)
+        //fullpage_api.destroy('all');
 
         if ( window.innerWidth < 767 ) {
           this.$store.commit('animations/setFullPageLoaded', true)
@@ -161,8 +163,8 @@
       },
 
       destroyed() {
-        fullpage_api.destroy('all');
         window.removeEventListener('resize',this.buildFullpageOnResize)
+        fullpage_api.destroy('all');
       }
     }
 </script>

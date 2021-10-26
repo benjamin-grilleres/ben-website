@@ -22,7 +22,8 @@ html,body {
   color: $black;
   font-family: 'AvenirNextRegular';
   background: white;
-  height: 100%;
+
+  overflow-x:hidden;
 
   &.loading {
     overflow: hidden;

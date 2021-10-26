@@ -6,6 +6,7 @@ module.exports = {
 
   env: env.parsed,
 
+  target: 'static',
 
   /*
   ** Headers of the page
@@ -40,12 +41,12 @@ module.exports = {
     ['nuxt-i18n', {
       defaultLocale: 'fr',
       locales: [
-        {
-          code: 'en',
-          iso: 'en-US',
-          name: 'English',
-          icon: '/icons/icon-gb.png',
-        },
+        // {
+        //   code: 'en',
+        //   iso: 'en-US',
+        //   name: 'English',
+        //   icon: '/icons/icon-gb.png',
+        // },
         {
           code: 'fr',
           iso: 'fr-FR',
@@ -59,7 +60,22 @@ module.exports = {
       },
       //seo: true
     }],
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    '@nuxtjs/google-analytics'
   ],
+
+  sitemap: {
+    hostname: 'https://benjamingrilleres.com',
+    gzip: true,
+    exclude: [
+      '/en/**'
+    ],
+  },
+
+  googleAnalytics: {
+    id: 'UA-163798379-1'
+  },
 
   pageTransition: 'fade',
 

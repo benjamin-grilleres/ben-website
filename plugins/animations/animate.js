@@ -3,7 +3,7 @@
 
         initClass(el, window) {
             this.options = {
-                viewportFactor : 0.2
+                viewportFactor : 0
             }
             this.window = window;
             this.el = el;
@@ -52,7 +52,6 @@
                 let nameAnim = item.el.getAttribute('data-fct');
                 let delay = item.el.getAttribute('data-delay');
                 if( this.inViewport( item.el, this.options.viewportFactor ) ) {
-
                     if ( nameAnim && !item.visible) {
 
                         if ( delay)
