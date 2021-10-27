@@ -81,7 +81,9 @@ export default {
     lafayette_conseil: 'Lafayette Conseil présente tous les services du groupe Lafayette ainsi que ses dernières actualités.',
     lafayette_jeminstalle: 'Dans la même lignée que Lafayette Conseil, Lafayette je m\'installe permet de découvrir aux pharmacies indépendantes l\'intérêt de rejoindre le groupe Lafayette.',
     rossini: 'Maison de ventes aux enchères depuis 1979, cette page permet de faire estimer gratuitement ses biens par un expert.',
-    siloe: 'La librairie Siloe Lis est une librairie généraliste et spécialisée dans la littérature religieuse.',
-    pincerais: 'La librairie du Pincerais avait besoin à court terme d\'être présent sur Internet afin de vendre des livres ailleurs qu\'en magasin.',
+    ecowatt: 'Je suis intervenu auprès de RTE (réseau de transport électrique français) pour le compte de l\'agence Mirum afin de développer un site permettant d\'être alerté par SMS en cas de coupure de courant.',
+    'nissan-leaf': "Pour le compte de l'agence Tequilarapido, j'ai participé au développement d'un outil pour le véhicule Nissan Leaf.",
+    'renault-src': "Pour le compte de l'agence Tequilarapido, j'ai été responsable de l'ajout d'un ensemble de fonctionnalités (Jobs vers Salesforce) pour le site Renault src qui est le site officiel de commande en ligne des documents techniques et administratifs",
+    'renault-conversion': "Pour le compte de l'agence Tequilarapido, j'ai participé à l'ajout de fonctionnalités sur le site Renault Conversion, destiné aux carrossiers transformateurs. L'outil est développé en Nuxt avec une API en Laravel, hébergé sur AWS"
   }
 }

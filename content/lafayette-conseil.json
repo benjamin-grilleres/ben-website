@@ -4,7 +4,7 @@
   "img": "/img/portfolio/background/lafayette-conseil.jpg",
   "external_url": "https://lafayetteconseil.com/",
   "title": "Lafayette Conseil",
-  "date": 2019,
+  "date": "2019-09",
   "slug": "lafayette_conseil",
   "technos": ["Wordpress", "Custom theme", "Custom plugin maps", "SCSS", "Laravel forge", "Intégration Invision", "Mysql"]
 }

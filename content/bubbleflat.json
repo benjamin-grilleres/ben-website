@@ -3,7 +3,7 @@
   "img": "/img/portfolio/background/bubbleflat.jpg",
   "external_url": "https://bubbleflat.com",
   "title": "Bubbleflat",
-  "date": 2017,
+  "date": "2017-07",
   "color": "#C57373",
   "slug": "bubbleflat",
   "technos": ["Laravel", "Vue.js", "AWS", "OVH", "Laravel Forge", "SCSS", "Spatie", "Mysql"],

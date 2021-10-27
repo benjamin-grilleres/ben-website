@@ -3,7 +3,7 @@
   "color": "#C3BDBD",
   "img": "/img/portfolio/background/ejt.jpg",
   "title": "EJT Toulouse",
-  "date": 2020,
+  "date": "2020-01",
   "slug": "ejt",
   "technos": ["Laravel", "Vue.js", "Nuxt.js", "Mysql", "Spatie"]
 }

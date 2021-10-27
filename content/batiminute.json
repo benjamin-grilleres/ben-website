@@ -4,7 +4,7 @@
   "img_mobile": "/img/portfolio/background/batiminute_mobile.png",
   "color": "#F5B31B",
   "title": "Batiminute",
-  "date": 2019,
+  "date": "2019-07",
   "slug": "batiminute",
   "technos": ["Laravel", "React Native", "Bluetooth LE", "Android Studio", "Xcode", "Expo", "Mysql"]
 }
