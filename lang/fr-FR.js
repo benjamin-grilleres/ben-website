@@ -3,7 +3,7 @@ export default {
     title: 'Hello, moi c\'est Benjamin !',
     subtitle: 'Je suis <span class="font-avenir-bold">développeur web fullstack freelance</span> spécialisé sur Laravel, Vue.js et Nuxt.js à Toulouse',
     title_call_to_action: 'Travaillons ensemble !',
-    master_degree: "3 ans d'expérience et diplômé d'un Master en Développement Logiciel",
+    master_degree: "4 ans d'expérience et diplômé d'un Master en Développement Logiciel",
     part_2: {
       title_1: 'Développement front et composants réutilisables',
       text_1: 'La conception par composants même dans le développement front a tout son intérêt pour maximiser la réutilisabilité et la maintenabilité d\'un site.',
@@ -14,10 +14,7 @@ export default {
       call_to_action: 'Voir mes projets'
     },
     part_3: {
-      title: 'Toutes mes compétences',
-      text_1: ' <span class="text-green font-avenir-bold">En vert </span> les technologies que j\'utilise régulièrement',
-      text_2: '<span class="text-dark-blue font-avenir-bold">En bleu foncé </span> les technologies déjà utilisées en entreprise',
-      text_3: '<span class="text-light-blue font-avenir-bold">En bleu clair </span> les compétences annexes au développement',
+      title: 'Mes dernières missions',
     },
     part_4: {
       title: 'J\'ai travaillé avec eux'

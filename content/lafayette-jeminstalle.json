@@ -1,0 +1,10 @@
+{
+  "company": "Wecom4u",
+  "img": "/img/portfolio/background/lafayette-jeminstalle.jpg",
+  "external_url": "https://jeminstalle.pharmacielafayette.com/",
+  "title": "Lafayette je m'installe",
+  "date": 2019,
+  "color": "#85B931",
+  "slug": "lafayette_jeminstalle",
+  "technos": ["Vue.js","Nuxt.js","Librairie d'animation", "Invision"]
+}

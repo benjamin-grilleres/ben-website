@@ -1,0 +1,10 @@
+{
+  "company": "Wecom4u",
+  "img": "/img/portfolio/background/batiminute.png",
+  "img_mobile": "/img/portfolio/background/batiminute_mobile.png",
+  "color": "#F5B31B",
+  "title": "Batiminute",
+  "date": 2019,
+  "slug": "batiminute",
+  "technos": ["Laravel", "React Native", "Bluetooth LE", "Android Studio", "Xcode", "Expo", "Mysql"]
+}

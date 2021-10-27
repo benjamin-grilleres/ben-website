@@ -38,6 +38,7 @@ module.exports = {
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/svg',
+    '@nuxt/content',
     ['nuxt-i18n', {
       defaultLocale: 'fr',
       locales: [

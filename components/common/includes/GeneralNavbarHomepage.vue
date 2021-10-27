@@ -20,7 +20,6 @@
               :key="'navbar-' + key"
               class="font-avenir-medium animated-link mx-6"
             >{{ link.text }}</nuxt-link>
-            <!--<translate-component class="ml-3"></translate-component>-->
           </div>
         </div>
       </div>
@@ -72,11 +71,7 @@
       return {
         links: [
           {
-            text: 'Mes expériences',
-            url: 'jobs'
-          },
-          {
-            text: 'Portfolio',
+            text: 'Mes projets',
             url: 'projects'
           },
         ],

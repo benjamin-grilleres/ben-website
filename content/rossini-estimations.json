@@ -1,0 +1,10 @@
+{
+  "company": "Wecom4u",
+  "img": "/img/portfolio/background/rossini.jpg",
+  "external_url": "https://rossini-estimations.com/",
+  "title": "Rossini estimations",
+  "date": 2019,
+  "color": "#E9A960",
+  "slug": "rossini",
+  "technos": ["Vue.js","Nuxt.js","Librairie d\"animation", "Hotjar", "Invision"]
+}

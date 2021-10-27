@@ -1,16 +1,6 @@
 <template>
     <div class="portfolio">
-     <!-- <div class="flex justify-center items-center fixed-filters">
-        Trier les projets par entreprise :
-        <div
-          v-for="(filter,key) in filters"
-          :key="'filter-' +key"
-        >
-          <input type="radio" class="hidden" :id="filter" :value="filter" v-model="filterActive"/>
-          <label @click="filterProject(filter)" :for="filter" class="custom-btn-filter mx-3 cursor-pointer" :class="{'active': filterActive === filter}">{{ filter }}</label>
-        </div>
-      </div>-->
-      <h1 class="title-h1 text-center py-16">{{ $t('projects.title')}} <template v-if="$route.query.f"> {{ ' ' + $t('projects.at') + ' ' +$route.query.f }}</template></h1>
+      <h1 class="title-h1 text-center py-16">{{ $t('projects.title')}}</h1>
       <div>
         <div
           v-for="(project,key2) in projects"
@@ -48,7 +38,6 @@
 </template>
 
 <script>
-  import Projects from '~/helpers/projects.js'
   import Animate from '~/plugins/animations/animate.js'
     export default {
         name: "portfolio",
@@ -62,63 +51,14 @@
           }
         },
 
-        asyncData({route}) {
-          let filterActive = 'Tous'
-          if ( route.query.f ) {
-            filterActive = route.query.f
-          }
-          let projects = Projects;
-
-          if ( filterActive !== 'Tous' )
-            projects = projects.filter( p => p.company === filterActive)
-
+        async asyncData({$content}) {
+          const projects = await $content().sortBy('date', 'desc').fetch()
           return {
-            projects: projects,
-            allProjects: [...Projects],
-            filterActive: filterActive
+            projects
           }
         },
-
-        data() {
-            return {
-              filters: [
-                'Tous',
-                'Bubbleflat',
-                'Tmic',
-                'Wecom4u'
-              ],
-            }
-        },
-
-      watch: {
-          '$route'() {
-            this.filterProject()
-          }
-      },
 
         methods: {
-          filterProject() {
-            let projects = [...this.allProjects];
-            let filter = this.$route.query.f;
-
-            let queryParams = {};
-            if ( filter ) {
-              queryParams = {f: filter};
-              projects = this.allProjects.filter( p => p.company === filter)
-            }
-            this.projects = projects;
-            this.$router.push({query: queryParams})
-
-            setTimeout( () => {
-              let $animatedElements = this.$el.querySelectorAll('[data-fct]')
-
-              $animatedElements.forEach( $animatedEl => {
-                  $animatedEl.classList.add('active');
-              })
-              window.scrollTo(0,0);
-
-            },300)
-          },
           loadingComplete() {
             Animate.initClass(this.$el, window)
           }

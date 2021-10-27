@@ -83,16 +83,7 @@
           <div class="text-center mb-6 sub-title">
             {{ $t('index.part_3.title')}}
           </div>
-          <div class="text-lg text-center">
-            <div class="mb-3" v-html="$t('index.part_3.text_1')">
-            </div>
-            <div class="mb-3" v-html="$t('index.part_3.text_2')">
-            </div>
-            <div v-html="$t('index.part_3.text_3')">
-            </div>
-          </div>
         </div>
-        <bubbles-component></bubbles-component>
       </div>
       <div class="homepage-part-4 my-32">
         <div class="text-center mb-12 md:mb-24 sub-title">
@@ -138,7 +129,6 @@ import ArrowLeft from '@/static/icons/right.svg?inline'
 import Animate from '~/plugins/animations/animate.js'
 import {mapGetters} from 'vuex'
 import BeautifulCarousel from "../components/homepage/BeautifulCarousel";
-import BubblesComponent from "../components/homepage/BubblesComponent";
 const MEDIA_MAX_IMAGE = 991;
 
 export default {
@@ -150,7 +140,6 @@ export default {
   },
 
   components: {
-    BubblesComponent,
     BeautifulCarousel,
     ArrowLeft
   },
