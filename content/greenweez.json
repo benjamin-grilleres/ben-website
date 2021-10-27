@@ -1,0 +1,10 @@
+{
+  "company": "Greenweez",
+  "img": "/img/portfolio/background/greenweez.png",
+  "external_url": "https://greenweez.com",
+  "title": "Greenweez",
+  "date": "2021-09",
+  "color": "#277264",
+  "slug": "greenweez",
+  "technos": ["Vue.js 2 & 3", "Nuxt 2 & 3", "Tailwind", "Storybook", "Jest", "Cypress"]
+}

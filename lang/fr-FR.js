@@ -83,7 +83,8 @@ export default {
     rossini: 'Maison de ventes aux enchères depuis 1979, cette page permet de faire estimer gratuitement ses biens par un expert.',
     ecowatt: 'Je suis intervenu auprès de RTE (réseau de transport électrique français) pour le compte de l\'agence Mirum afin de développer un site permettant d\'être alerté par SMS en cas de coupure de courant.',
     'nissan-leaf': "Pour le compte de l'agence Tequilarapido, j'ai participé au développement d'un outil pour le véhicule Nissan Leaf.",
-    'renault-src': "Pour le compte de l'agence Tequilarapido, j'ai été responsable de l'ajout d'un ensemble de fonctionnalités (Jobs vers Salesforce) pour le site Renault src qui est le site officiel de commande en ligne des documents techniques et administratifs",
-    'renault-conversion': "Pour le compte de l'agence Tequilarapido, j'ai participé à l'ajout de fonctionnalités sur le site Renault Conversion, destiné aux carrossiers transformateurs. L'outil est développé en Nuxt avec une API en Laravel, hébergé sur AWS"
+    'renault-src': "Pour le compte de l'agence Tequilarapido, j'ai été responsable de l'ajout d'un ensemble de fonctionnalités (Jobs vers Salesforce) pour le site Renault src qui est le site officiel de commande en ligne des documents techniques et administratifs.",
+    'renault-conversion': "Pour le compte de l'agence Tequilarapido, j'ai participé à l'ajout de fonctionnalités sur le site Renault Conversion, destiné aux carrossiers transformateurs. L'outil est développé en Nuxt avec une API en Laravel, hébergé sur AWS.",
+    greenweez: "Greenweez a fait appel à mon expertise afin de concevoir une nouvelle architecture pour leur futur site. Avec le reste de l'équipe, nous avons mis en place une stack dont l'objectif était d'avoir un code maintenable sur le long terme."
   }
 }
