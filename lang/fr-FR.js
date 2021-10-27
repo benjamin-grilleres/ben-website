@@ -3,7 +3,7 @@ export default {
     title: 'Hello, moi c\'est Benjamin !',
     subtitle: 'Je suis <span class="font-avenir-bold">développeur web fullstack freelance</span> spécialisé sur Laravel, Vue.js et Nuxt.js à Toulouse',
     title_call_to_action: 'Travaillons ensemble !',
-    master_degree: "3 ans d'expérience et diplômé d'un Master en Développement Logiciel",
+    master_degree: "4 ans d'expérience et diplômé d'un Master en Développement Logiciel",
     part_2: {
       title_1: 'Développement front et composants réutilisables',
       text_1: 'La conception par composants même dans le développement front a tout son intérêt pour maximiser la réutilisabilité et la maintenabilité d\'un site.',
@@ -14,10 +14,7 @@ export default {
       call_to_action: 'Voir mes projets'
     },
     part_3: {
-      title: 'Toutes mes compétences',
-      text_1: ' <span class="text-green font-avenir-bold">En vert </span> les technologies que j\'utilise régulièrement',
-      text_2: '<span class="text-dark-blue font-avenir-bold">En bleu foncé </span> les technologies déjà utilisées en entreprise',
-      text_3: '<span class="text-light-blue font-avenir-bold">En bleu clair </span> les compétences annexes au développement',
+      title: 'Mes dernières missions',
     },
     part_4: {
       title: 'J\'ai travaillé avec eux'
@@ -84,7 +81,10 @@ export default {
     lafayette_conseil: 'Lafayette Conseil présente tous les services du groupe Lafayette ainsi que ses dernières actualités.',
     lafayette_jeminstalle: 'Dans la même lignée que Lafayette Conseil, Lafayette je m\'installe permet de découvrir aux pharmacies indépendantes l\'intérêt de rejoindre le groupe Lafayette.',
     rossini: 'Maison de ventes aux enchères depuis 1979, cette page permet de faire estimer gratuitement ses biens par un expert.',
-    siloe: 'La librairie Siloe Lis est une librairie généraliste et spécialisée dans la littérature religieuse.',
-    pincerais: 'La librairie du Pincerais avait besoin à court terme d\'être présent sur Internet afin de vendre des livres ailleurs qu\'en magasin.',
+    ecowatt: 'Je suis intervenu auprès de RTE (réseau de transport électrique français) pour le compte de l\'agence Mirum afin de développer un site permettant d\'être alerté par SMS en cas de coupure de courant.',
+    'nissan-leaf': "Pour le compte de l'agence Tequilarapido, j'ai participé au développement d'un outil pour le véhicule Nissan Leaf.",
+    'renault-src': "Pour le compte de l'agence Tequilarapido, j'ai été responsable de l'ajout d'un ensemble de fonctionnalités (Jobs vers Salesforce) pour le site Renault src qui est le site officiel de commande en ligne des documents techniques et administratifs.",
+    'renault-conversion': "Pour le compte de l'agence Tequilarapido, j'ai participé à l'ajout de fonctionnalités sur le site Renault Conversion, destiné aux carrossiers transformateurs. L'outil est développé en Nuxt avec une API en Laravel, hébergé sur AWS.",
+    greenweez: "Greenweez a fait appel à mon expertise afin de concevoir une nouvelle architecture pour leur futur site. Avec le reste de l'équipe, nous avons mis en place une stack dont l'objectif était d'avoir un code maintenable sur le long terme."
   }
 }

@@ -1,0 +1,10 @@
+{
+  "company": "Mirum Agency - RTE",
+  "img": "/img/portfolio/background/ecowatt.png",
+  "external_url": "https://www.monecowatt.fr/",
+  "title": "Ecowatt",
+  "date": "2020-09",
+  "color": "#322f5e",
+  "slug": "ecowatt",
+  "technos": ["Vue.js","Nuxt.js","TailwindCSS", "Node", "AWS (s3, API Gateway, Lambda)", "Scripts sh"]
+}

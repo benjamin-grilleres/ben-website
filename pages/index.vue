@@ -83,16 +83,30 @@
           <div class="text-center mb-6 sub-title">
             {{ $t('index.part_3.title')}}
           </div>
-          <div class="text-lg text-center">
-            <div class="mb-3" v-html="$t('index.part_3.text_1')">
+          <div class="row">
+            <div class="col-sm-6">
+              <latest-project 
+                :description="$t(`projects.${projects[0].slug}`)" 
+                :title-not-hovered="projects[0].title" 
+                :image="projects[0].img" 
+                :project-link="projects[0].external_url"
+              >
+            </latest-project>
             </div>
-            <div class="mb-3" v-html="$t('index.part_3.text_2')">
+            <div class="col-sm-6">
+              <latest-project 
+                :image="projects[1].img"
+                :description="$t(`projects.${projects[1].slug}`)" 
+                :title-not-hovered="projects[1].title" 
+                :project-link="projects[1].external_url"
+              >
+            </latest-project>
+
             </div>
-            <div v-html="$t('index.part_3.text_3')">
-            </div>
+            
+            
           </div>
         </div>
-        <bubbles-component></bubbles-component>
       </div>
       <div class="homepage-part-4 my-32">
         <div class="text-center mb-12 md:mb-24 sub-title">
@@ -138,7 +152,7 @@ import ArrowLeft from '@/static/icons/right.svg?inline'
 import Animate from '~/plugins/animations/animate.js'
 import {mapGetters} from 'vuex'
 import BeautifulCarousel from "../components/homepage/BeautifulCarousel";
-import BubblesComponent from "../components/homepage/BubblesComponent";
+import LatestProject from '../components/homepage/LatestProject.vue';
 const MEDIA_MAX_IMAGE = 991;
 
 export default {
@@ -150,11 +164,22 @@ export default {
   },
 
   components: {
-    BubblesComponent,
     BeautifulCarousel,
-    ArrowLeft
+    ArrowLeft,
+    LatestProject
   },
 
+  async asyncData({ $content }) {
+    const projects = await $content()
+    .only(['date', 'img', 'external_url', 'slug', 'title'])
+    .sortBy('date', 'desc')
+    .limit(2)
+    .fetch()
+
+    return {
+      projects
+    }
+  },
 
   methods: {
     checkWindowScroll() {

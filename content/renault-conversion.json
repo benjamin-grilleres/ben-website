@@ -1,0 +1,10 @@
+{
+  "company": "Tequilarapido - Renault conversion",
+  "img": "/img/portfolio/background/renault-conversion.png",
+  "external_url": "https://www.conversion.renault.com/login",
+  "title": "Renault conversion",
+  "date": "2021-03",
+  "color": "#222222",
+  "slug": "renault-conversion",
+  "technos": ["Laravel", "Vue.js", "Nuxt.js", "Sass", "AWS"]
+}

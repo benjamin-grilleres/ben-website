@@ -1,0 +1,9 @@
+{
+  "company": "Wecom4u",
+  "img": "/img/portfolio/background/wefiles4u.png",
+  "title": "Wefiles4u",
+  "date": "2019-06",
+  "color": "#4C4B4B",
+  "slug": "wefiles4u",
+  "technos": ["Laravel", "Vue.js", "Nuxt.js", "Mysql", "Spatie"]
+}

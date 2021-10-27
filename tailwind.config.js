@@ -5,14 +5,13 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true
-  },
+  mode: 'jit',
   theme: {
     inset: {
       '-45': '-45px',
       '4': '4px',
       '8': '8px',
+      '0': '0',
       '12': '12px',
       '16': '16px',
       '1/2': '50%'

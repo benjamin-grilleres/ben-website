@@ -1,0 +1,10 @@
+{
+  "company": "Tequilarapido - Nissan",
+  "img": "/img/portfolio/background/nissan-leaf.png",
+  "external_url": "https://www.nissan.fr/vehicules/neufs/leaf/electrique-et-avantages.html",
+  "title": "Nissan Leaf calculator",
+  "date": "2021-01",
+  "color": "#1DA8E5",
+  "slug": "nissan-leaf",
+  "technos": ["Vue.js", "Laravel"]
+}

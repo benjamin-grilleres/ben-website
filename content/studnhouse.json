@@ -1,0 +1,11 @@
+{
+  "company": "Bubbleflat",
+  "img": "/img/portfolio/background/stud.png",
+  "img_mobile": "/img/portfolio/background/stud_mobile.png",
+  "external_url": "http://studnhouse.com",
+  "title": "Studnhouse",
+  "date": "2018-04",
+  "background": "/img/portfolio/background/background_landing.jpg",
+  "slug": "studnhouse",
+  "technos": ["Vue.js","Nuxt.js","SCSS","i18n"]
+}

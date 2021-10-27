@@ -20,7 +20,6 @@
               :key="'navbar-' + key"
               class="font-avenir-medium animated-link mx-6"
             >{{ link.text }}</nuxt-link>
-            <!--<translate-component class="ml-3"></translate-component>-->
           </div>
         </div>
       </div>
@@ -72,11 +71,7 @@
       return {
         links: [
           {
-            text: 'Mes expériences',
-            url: 'jobs'
-          },
-          {
-            text: 'Portfolio',
+            text: 'Mes projets',
             url: 'projects'
           },
         ],
@@ -124,7 +119,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
   .navbar-animated {
     opacity: 0;
     left: 0;
@@ -193,8 +188,6 @@
       }
       &:nth-child(2) {
         top: 12px;
-        // width: 25px;
-        // left: 4px;
         -webkit-transform-origin: left center;
         -moz-transform-origin: left center;
         -o-transform-origin: left center;
