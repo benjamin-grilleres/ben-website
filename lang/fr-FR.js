@@ -5,7 +5,7 @@ export default {
       'Je suis <span class="font-avenir-bold">développeur web fullstack freelance</span> spécialisé sur Laravel (PHP), Vue - Nuxt et React - Next (Javascript) à Toulouse.',
     title_call_to_action: "Travaillons ensemble !",
     master_degree:
-      "4 ans d'expérience et diplômé d'un Master en Développement Logiciel",
+      "6 ans d'expérience et diplômé d'un Master en Développement Logiciel",
     part_2: {
       title_1: "Développement front et composants réutilisables",
       text_1:
