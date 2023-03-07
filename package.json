@@ -2,7 +2,7 @@
   "name": "nuxt-starter",
   "version": "1.0.0",
   "description": "Nuxt.js project",
-  "author": "Benjamin Grilleres <bg@wecom4u.com>",
+  "author": "Benjamin Grilleres <contact@benjamingrilleres.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
